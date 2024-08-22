@@ -1,6 +1,7 @@
 
 import Header from "./components/common/Header";
 import Hero from "./components/Hero";
+import Product from "./components/Product";
 import Range from "./components/Range";
 
 
@@ -13,6 +14,7 @@ function App() {
      <Header/>
      <Hero/>
      <Range/>
+     <Product/>
     </>
   )
 }

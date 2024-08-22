@@ -16,7 +16,7 @@ const Range = () => {
 
         <div className="flex  justify-around gap-y-10 flex-wrap">
           {range.map((item, index) => (
-            <div className="flex flex-col items-center">
+            <div key={index} className="flex flex-col items-center">
               <img src={item.img} alt="" className="object-cover" />
               <p className="text-normal font-bold text-xl pt-6">{item.name}</p>
             </div>
@@ -41,5 +41,5 @@ const range = [
   {
     img: range3,
     name: "Bedroom",
-  },
+  }
 ];

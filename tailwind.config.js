@@ -15,6 +15,7 @@ export default {
         peach : '#FFF3E3',
         brown : '#B88E2F',
         grey : "#666666",
+        offwhite : "#F4F5F7",
         
       },
     },
