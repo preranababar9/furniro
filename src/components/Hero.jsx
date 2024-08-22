@@ -4,7 +4,9 @@ const Hero = () => {
   return (
         <section className=''>
     <div className='max-width'>
-        Hero</div>
+
+        Hero
+        </div>
         </section>
   )
 }

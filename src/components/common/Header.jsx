@@ -12,7 +12,7 @@ const Header = () => {
   return (
    
     <div>
-      <div className='flex justify-around lg:px-8 py-4 items-center bg-blue-200'>
+      <div className='flex justify-between max-width  py-4 items-center '>
     <img src={navlogo} alt="" />
 
     <ul className='flex gap-14 font-black font-normal text-xl max-md:hidden '>
