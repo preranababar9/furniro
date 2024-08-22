@@ -16,6 +16,7 @@ export default {
         brown : '#B88E2F',
         grey : "#666666",
         offwhite : "#F4F5F7",
+        pink : "#FCF8F3",
         
       },
     },
