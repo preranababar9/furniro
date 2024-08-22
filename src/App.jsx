@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Inspire from "./components/Inspire";
 import Product from "./components/Product";
 import Range from "./components/Range";
+import Setup from "./components/Setup";
 
 
 
@@ -17,6 +18,7 @@ function App() {
      <Range/>
      <Product/>
      <Inspire/>
+     <Setup/>
     </>
   )
 }
