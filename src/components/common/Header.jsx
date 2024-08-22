@@ -8,6 +8,7 @@ import cart from "/icons/cart.svg";
 
 
 
+
 const Header = () => {
   return (
    
@@ -16,10 +17,11 @@ const Header = () => {
     <img src={navlogo} alt="" />
 
     <ul className='flex gap-14 font-black font-normal text-xl max-md:hidden '>
-    <li><a>Home</a></li>
-    <li><a>Shop</a></li>
-    <li><a>About</a></li>
-    <li><a>Contact</a></li>
+
+    <li><Link to="/home">Home</Link></li>
+    <li><Link>Shop</Link></li>
+    <li><Link>About</Link></li>
+    <li><Link>Contact</Link></li>
     </ul>
 
 <div className='flex lg:gap-14'>
