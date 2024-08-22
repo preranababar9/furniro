@@ -14,6 +14,7 @@ export default {
       colors:{
         peach : '#FFF3E3',
         brown : '#B88E2F',
+        grey : "#666666",
         
       },
     },
