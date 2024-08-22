@@ -1,10 +1,10 @@
 
 import Header from "./components/common/Header";
-import Hero from "./components/Hero";
-import Inspire from "./components/Inspire";
-import Product from "./components/Product";
-import Range from "./components/Range";
-import Setup from "./components/Setup";
+import Hero from "./components/home/Hero";
+import Inspire from "./components/home/Inspire";
+import Product from "./components/home/Product";
+import Range from "./components/home/Range";
+import Setup from "./components/home/Setup";
 
 
 
