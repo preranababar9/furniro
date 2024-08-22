@@ -11,6 +11,11 @@ export default {
         medium:['Medium'],
         black:['Black']
       },
+      colors:{
+        peach : '#FFF3E3',
+        brown : '#B88E2F',
+        
+      },
     },
   },
   plugins: [],
