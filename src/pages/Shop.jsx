@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/common/Header'
-import Product from '../components/Home/Product'
+import Product from '../components/home/Product'
 import Footer from '../components/common/Footer'
 
 const Shop = () => {
