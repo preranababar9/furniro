@@ -10,7 +10,7 @@ import Setup from "./components/home/Setup";
 
 
 function App() {
- 
+
 
   return (
     <>
