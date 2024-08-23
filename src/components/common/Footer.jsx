@@ -66,7 +66,7 @@ const Footer = () => {
 
         <hr></hr>
 
-        <p className="py-10 font-semibold max-md:text-center text-lg">
+        <p className="py-10 font-semibold text-center text-lg">
           2024 furniro. All rights reverved
         </p>
       </div>
