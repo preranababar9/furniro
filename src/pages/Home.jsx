@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from '../components/common/Header'
-import Hero from '../components/Home/Hero'
-import Inspire from '../components/Home/Inspire'
-import Product from '../components/Home/Product'
-import Range from '../components/Home/Range'
-import Setup from '../components/Home/Setup'
+import Header from '../components/common/Header';
+import Hero from '../components/home/Hero';
+import Inspire from '../components/home/Inspire';
+import Product from '../components/home/Product';
+import Range from '../components/home/Range';
+import Setup from '../components/home/Setup';
 import Footer from "../components/common/Footer";
 
 const Home = () => {

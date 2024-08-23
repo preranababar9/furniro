@@ -15,14 +15,14 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col max-md:flex-col-reverse gap-10">
             <p className="text-lg text-offgrey font-normal ">Links</p>
             <ul className=" flex flex-col gap-10 font-semibold text-[#000000] text-xl ">
               <li>
                 <Link to="/home">Home</Link>
               </li>
               <li>
-                <Link>Shop</Link>
+                <Link to="/shop">Shop</Link>
               </li>
               <li>
                 <Link>About</Link>
