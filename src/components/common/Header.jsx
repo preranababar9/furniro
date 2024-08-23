@@ -18,10 +18,10 @@ const Header = () => {
 
     <ul className='flex gap-14 font-black font-normal text-xl max-md:hidden '>
 
-    <li><Link to="/home">Home</Link></li>
-    <li><Link>Shop</Link></li>
-    <li><Link>About</Link></li>
-    <li><Link>Contact</Link></li>
+    <li className='hover:underline hover:underline-offset-4 hover:scale-105'><Link to="/home">Home</Link></li>
+    <li className='hover:underline hover:underline-offset-4 hover:scale-105'><Link to="/shop">Shop</Link></li>
+    <li className='hover:underline hover:underline-offset-4 hover:scale-105'><Link>About</Link></li>
+    <li className='hover:underline hover:underline-offset-4 hover:scale-105'><Link>Contact</Link></li>
     </ul>
 
 <div className='flex lg:gap-14'>

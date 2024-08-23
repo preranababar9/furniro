@@ -1,4 +1,5 @@
 
+import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import Hero from "./components/Home/Hero";
 import Inspire from "./components/Home/Inspire";
@@ -18,7 +19,8 @@ function App() {
      <Range/>
      <Product/>
      <Inspire/>
-     <Setup/>
+     {/* <Setup/> */}
+     <Footer/>
     </>
   )
 }
