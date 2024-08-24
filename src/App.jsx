@@ -1,4 +1,5 @@
 
+import Card from "./components/Card";
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import Hero from "./components/home/Hero";
@@ -20,6 +21,7 @@ function App() {
      <Product/>
      <Inspire/>
      {/* <Setup/> */}
+     <Card/>
      <Footer/>
     </>
   )

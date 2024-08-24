@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="pt-20">
+    <section className="">
       {" "}
       <hr></hr>
       <div className="max-width ">
