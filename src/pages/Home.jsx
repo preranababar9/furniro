@@ -15,7 +15,7 @@ const Home = () => {
       <Inspire/>
       <Product/>
       <Range/>
-      <Setup/>
+      {/* <Setup/> */}
       <Footer/>
     </div>
   )

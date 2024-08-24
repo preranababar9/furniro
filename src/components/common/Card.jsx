@@ -7,11 +7,11 @@ import card4 from "/icons/card4.svg";
 
 const Card = () => {
   return (
-    <section className="mt-10 bg-[#FAF3EA]">
-      <div className="max-width py-20 flex gap-y-20 justify-between flex-wrap">
+    <section className="mt-10 w-full bg-[#FAF3EA]">
+      <div className="max-width py-20 flex max-md:flex-col items-center gap-y-20 justify-between ">
 
 {card.map((item, index) => (
-  <div className="flex gap-2 items-center">
+  <div className="flex gap-2 items-center  ">
   <img src={item.img} alt="" />
   <div>
   <h4 className="lg:text-2xl text-xl font-regular font-semibold">{item.title}</h4>

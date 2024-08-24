@@ -7,21 +7,22 @@ const Contactpg = () => {
   return (
     <section className="py-20 ">
       <div className="max-width">
+
         <div className=" pb-20 flex flex-col  items-center">
-          <h2 className=" font-black font-bold text-3xl ">
+          <h2 className=" font-black font-bold lg:text-3xl text-2xl ">
             Get In Touch With Us
           </h2>
-          <p className="text-offgrey w-1/2 text-center ">
+          <p className="text-offgrey lg:w-1/2 text-center max-md:text-sm ">
             For More Information About Our Product & Services. Please Feel Free
             To Drop Us An Email. Our Staff Always Be There To Help You Out. Do
             Not Hesitate!
           </p>
         </div>
 
-        <div className="flex justify-evenly">
-          <div className="flex flex-col gap-y-10 w-[25%] px-10">
-            <div className="flex gap-6">
-              <img src={contact1} alt="" />
+        <div className="flex max-md:flex-col justify-evenly">
+          <div className="flex lg:flex-col flex-wrap  gap-y-10 lg:w-[25%] px-10">
+            <div className="flex gap-6 items-center">
+              <img src={contact1} alt="" className="h-10"/>
 
               <div>
                 <h4 className="text-lg font-semibold">Address</h4>
@@ -31,8 +32,8 @@ const Contactpg = () => {
               </div>
             </div>
 
-            <div className="flex gap-6">
-              <img src={contact2} alt="" />
+            <div className="flex gap-6 items-center">
+              <img src={contact2} alt="" className="h-10"/>
 
               <div>
                 <h4 className="text-lg font-semibold">Phone</h4>
@@ -41,8 +42,8 @@ const Contactpg = () => {
               </div>
             </div>
 
-            <div className="flex gap-6">
-              <img src={contact3} alt="" />
+            <div className="flex gap-6 items-center">
+              <img src={contact3} alt="" className="h-10"/>
 
               <div>
                 <h4 className="text-lg font-semibold">Working Time</h4>
@@ -52,7 +53,7 @@ const Contactpg = () => {
             </div>
           </div>
 
-          <div className="">
+          <div className="max-md:mt-10">
             <div className="flex flex-col gap-y-1 pb-5">
               <label>Your name</label>
               <input
