@@ -15,7 +15,7 @@ function App() {
       <Hero />
 
       <Range />
-      <Product />
+
       <Inspire />
       {/* <Setup/> */}
 
