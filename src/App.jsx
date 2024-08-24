@@ -1,4 +1,3 @@
-
 import Card from "./components/common/Card";
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
@@ -9,24 +8,20 @@ import Product from "./components/home/Product";
 import Range from "./components/home/Range";
 import Setup from "./components/home/Setup";
 
-
-
 function App() {
-
-
   return (
     <>
-     <Header/>
-     <Hero/>
-     <Range/>
-     <Product/>
-     <Inspire/>
-     {/* <Setup/> */}
-     <Card/>
-     <Contactpg/>
-     <Footer/>
+      <Header />
+      <Hero />
+
+      <Range />
+      <Product />
+      <Inspire />
+      {/* <Setup/> */}
+
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
