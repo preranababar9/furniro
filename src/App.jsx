@@ -2,6 +2,7 @@
 import Card from "./components/common/Card";
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
+import Contactpg from "./components/contact/Contactpg";
 import Hero from "./components/home/Hero";
 import Inspire from "./components/home/Inspire";
 import Product from "./components/home/Product";
@@ -22,6 +23,7 @@ function App() {
      <Inspire/>
      {/* <Setup/> */}
      <Card/>
+     <Contactpg/>
      <Footer/>
     </>
   )
