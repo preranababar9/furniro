@@ -1,5 +1,5 @@
 
-import Card from "./components/Card";
+import Card from "./components/common/Card";
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import Hero from "./components/home/Hero";
