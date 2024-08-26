@@ -7,36 +7,45 @@ const Cart = () => {
     <section className="py-20">
       <div className="max-width">
         <div className="flex w-full max-md:flex-col lg:gap-5 gap-y-5">
+          
           {/* cart columns div */}
-          <div className="lg:w-3/4">
+          <table className="table-fixed lg:w-3/4  ">
             {/* title  */}
-            <div className="flex justify-evenly bg-[#F9F1E7] py-4 mb-10 text-lg font-semibold">
-              <p>Product</p>
-              <p>Price</p>
-              <p>Quantity</p>
-              <p>Subtotal</p>
-              <p>Subtotal</p>
-            </div>
+            <thead className=" bg-[#F9F1E7] h-1/4 text-lg font-semibold">
+              <tr>
+              <th className="">Product</th>
+              <th className="">Price</th>
+              <th className="">Quantity</th>
+              <th className="">Subtotal</th>
+              <th className="">Remove</th>
+              </tr>
+            </thead>
 
             {/* Products */}
-            <div className="w-full flex  justify-evenly items-center">
-              <div className=" w-1/5 flex gap-4 items-center">
-                <img src={set4} alt="" className=" w-1/2" />
+            <tbody className="w-full">
+             <tr className="">
+              <td className=""> <img src={set4} alt="" className="mx-auto pb-2 w-1/2 " />
 
-                <p className="text-offgrey text-lg">Queen Size Bed</p>
-              </div>
+                <p className=" text-center font-semibold text-lg">Queen Size Bed</p></td> 
+             
 
-              <p className="text-offgrey text-lg">Rs. 1,00,000</p>
+            <td className="text-offgrey text-xl text-center"> Rs. 1,00,000</td>
+            <td className="text-xl   text-center"> 1</td>
+            <td className="text-xl   text-center"> Rs. 1,00,000</td>
 
-              <p className="text-lg">1</p>
-              <p className="text-lg">Rs. 1,00,000</p>
+            <td> <MdDelete size={40} className="text-brown mx-auto" /></td> </tr>
 
-              <MdDelete size={32} className="text-brown" />
-            </div>
-          </div>
+
+
+
+
+            </tbody>
+          </table>
+
+
 
           {/* cart totals div */}
-          <div className="lg:w-1/4  flex-col items-center bg-[#F9F1E7] py-5">
+          <div className="lg:w-1/4  flex-col justify-center items-center bg-[#F9F1E7] py-5">
             <h4 className="text-3xl font-bold text-center">Cart Totals</h4>
 
             <div className="flex mt-10 gap-10 justify-evenly">
