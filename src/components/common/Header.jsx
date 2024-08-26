@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div>
       <div className="flex justify-between max-width  py-4 items-center ">
-        <img src={navlogo} alt="" />
+        <img src={navlogo} alt="" className="max-md:h-10 w-1/2"/>
 
         <ul className="flex gap-14 font-black font-normal text-xl max-md:hidden ">
           <li className="hover:underline hover:underline-offset-4 hover:scale-105">
@@ -28,7 +28,7 @@ const Header = () => {
           </li>
         </ul>
 
-        <div className="flex lg:gap-10 items-center">
+        <div className="flex lg:gap-10 max-md:gap-2 items-center">
           <Link>
             <MdOutlineAccountCircle size={28} />
           </Link>
