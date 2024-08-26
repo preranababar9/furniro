@@ -7,42 +7,62 @@ const Cart = () => {
     <section className="py-20">
       <div className="max-width">
         <div className="flex w-full max-md:flex-col lg:gap-5 gap-y-5">
-          
           {/* cart columns div */}
           <table className="table-fixed lg:w-3/4  ">
             {/* title  */}
             <thead className=" bg-[#F9F1E7] h-1/4 text-lg font-semibold">
               <tr>
-              <th className="">Product</th>
-              <th className="">Price</th>
-              <th className="">Quantity</th>
-              <th className="">Subtotal</th>
-              <th className="">Remove</th>
+                <th className="">Product</th>
+                <th className="">Price</th>
+                <th className="">Quantity</th>
+                <th className="">Subtotal</th>
+                <th className="">Remove</th>
               </tr>
             </thead>
 
             {/* Products */}
             <tbody className="w-full">
-             <tr className="">
-              <td className=""> <img src={set4} alt="" className="mx-auto pb-2 w-1/2 " />
+              <tr className="">
+                <td className="">
+                  {" "}
+                  <img src={set4} alt="" className="mx-auto pb-2 w-1/2 " />
+                  <p className=" text-center font-semibold text-lg">
+                    Queen Size Bed
+                  </p>
+                </td>
+                <td className="text-offgrey text-xl text-center">
+                  {" "}
+                  Rs. 1,00,000
+                </td>
+                <td className="text-xl   text-center"> 1</td>
+                <td className="text-xl   text-center"> Rs. 1,00,000</td>
+                <td>
+                  {" "}
+                  <MdDelete size={40} className="text-brown mx-auto" />
+                </td>{" "}
+              </tr>
 
-                <p className=" text-center font-semibold text-lg">Queen Size Bed</p></td> 
-             
-
-            <td className="text-offgrey text-xl text-center"> Rs. 1,00,000</td>
-            <td className="text-xl   text-center"> 1</td>
-            <td className="text-xl   text-center"> Rs. 1,00,000</td>
-
-            <td> <MdDelete size={40} className="text-brown mx-auto" /></td> </tr>
-
-
-
-
-
+              <tr className="">
+                <td className="">
+                  {" "}
+                  <img src={set4} alt="" className="mx-auto pb-2 w-1/2 " />
+                  <p className=" text-center font-semibold text-lg">
+                    Queen Size Bed
+                  </p>
+                </td>
+                <td className="text-offgrey text-xl text-center">
+                  {" "}
+                  Rs. 1,00,000
+                </td>
+                <td className="text-xl   text-center"> 1</td>
+                <td className="text-xl   text-center"> Rs. 1,00,000</td>
+                <td>
+                  {" "}
+                  <MdDelete size={40} className="text-brown mx-auto" />
+                </td>{" "}
+              </tr>
             </tbody>
           </table>
-
-
 
           {/* cart totals div */}
           <div className="lg:w-1/4  flex-col justify-center items-center bg-[#F9F1E7] py-5">
@@ -69,3 +89,4 @@ const Cart = () => {
 };
 
 export default Cart;
+
