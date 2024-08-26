@@ -6,9 +6,9 @@ const Cart = () => {
   return (
     <section className="py-20">
       <div className="max-width">
-        <div className="flex gap-5">
+        <div className="flex w-full max-md:flex-col lg:gap-5 gap-y-5">
           {/* cart columns div */}
-          <div className="w-3/4">
+          <div className="lg:w-3/4">
             {/* title  */}
             <div className="flex justify-evenly bg-[#F9F1E7] py-4 mb-10 text-lg font-semibold">
               <p>Product</p>
@@ -36,7 +36,7 @@ const Cart = () => {
           </div>
 
           {/* cart totals div */}
-          <div className="w-1/4  flex-col items-center bg-[#F9F1E7] py-5">
+          <div className="lg:w-1/4  flex-col items-center bg-[#F9F1E7] py-5">
             <h4 className="text-3xl font-bold text-center">Cart Totals</h4>
 
             <div className="flex mt-10 gap-10 justify-evenly">
