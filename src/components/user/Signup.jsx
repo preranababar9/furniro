@@ -55,9 +55,11 @@ const Signup = () => {
 
             <p className="text-lg text-center">
               You already have a account?{" "}
-              <a className="font-bold underline underline-offset-4">
+
+              <Link to="/login"
+              className="font-bold underline underline-offset-4">
                 Login here
-              </a>
+              </Link>
             </p>
           </div>
         </div>

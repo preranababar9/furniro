@@ -11,7 +11,7 @@ const Card = () => {
       <div className="max-width py-20 flex max-md:flex-col items-center gap-y-20 justify-between ">
 
 {card.map((item, index) => (
-  <div className="flex gap-2 items-center  ">
+  <div key={index} className="flex gap-2 items-center  ">
   <img src={item.img} alt="" />
   <div>
   <h4 className="lg:text-2xl text-xl font-regular font-semibold">{item.title}</h4>
