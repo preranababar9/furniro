@@ -1,5 +1,6 @@
 import React from 'react'
 import login from "/images/login.png";
+import { PiHandWavingDuotone } from "react-icons/pi";
 
 const Login = () => {
   return (
@@ -13,9 +14,12 @@ const Login = () => {
 
 
           <div className="flex flex-col w-1/3 max-md:w-full">
+          <div className='flex  gap-3'>
             <h4 className="text-3xl font-black font-bold pb-2">
-              Welcome
+              Welcome 
             </h4>
+            <PiHandWavingDuotone size={32} className='text-yellow-500' />
+            </div>
             <p className="text-md text-offgrey pb-6">
               Please login here
             </p>
