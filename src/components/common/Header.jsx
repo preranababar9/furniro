@@ -29,7 +29,7 @@ const Header = () => {
         </ul>
 
         <div className="flex lg:gap-10 max-md:gap-2 items-center">
-          <Link to="/signup" >
+          <Link to="/register" >
             <MdOutlineAccountCircle size={28}  />
           </Link>
           <IoIosSearch size={28} />

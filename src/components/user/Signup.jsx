@@ -2,7 +2,7 @@ import React from "react";
 import signup from "/images/signup.svg";
 import { Link } from "react-router-dom";
 
-const Signuplogin = () => {
+const Signup = () => {
   return (
     <section className="pb-20 pt-10">
       <div className="max-width">
@@ -66,4 +66,4 @@ const Signuplogin = () => {
   );
 };
 
-export default Signuplogin;
+export default Signup;

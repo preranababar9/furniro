@@ -10,7 +10,7 @@ import Home from './pages/Home.jsx';
 import Shop from './pages/Shop.jsx';
 import Contactpage from './pages/Contactpage.jsx';
 import Cartpage from './pages/Cartpage.jsx';
-import Signup from './pages/Signup.jsx';
+import Register from './pages/Register.jsx';
 
 
 const router = createBrowserRouter([
@@ -35,8 +35,8 @@ const router = createBrowserRouter([
     element: <Cartpage/>,
   },
   {
-    path: "signup",
-    element: <Signup/>,
+    path: "register",
+    element: <Register/>,
   },
 ]);
 

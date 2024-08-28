@@ -1,15 +1,15 @@
 import React from 'react'
-import Signuplogin from '../components/Signuplogin'
+import Signup from '../components/user/Signup'
 import Header from '../components/common/Header'
 import Contactpg from '../components/contact/Contactpg'
 import Footer from '../components/common/Footer'
 import Card from '../components/common/Card'
 
-const Signup = () => {
+const Register = () => {
   return (
     <div>
       <Header/>
-      <Signuplogin/>
+      <Signup/>
       <Card/>
       <Contactpg/>
       <Footer/>
@@ -17,4 +17,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default Register
