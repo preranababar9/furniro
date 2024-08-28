@@ -86,7 +86,7 @@ console.log(user);
          
             />
 
-            <button className="bg-[#B88E2F] text-white py-4 my-5 rounded-lg  ">
+            <button className="bg-[#B88E2F] text-white py-3 my-5 rounded-lg  ">
               <a className="text-lg">Signup</a>
             </button>
 

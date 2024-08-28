@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import login from "/images/login.png";
 import { PiHandWavingDuotone } from "react-icons/pi";
 
 const Login = () => {
+
+
+  const [data, setData] = useState(
+    {
+      email : "",
+      password : ""
+    }
+  );
+
+  const userData = (e) => {
+    const {name , value} = e.target;
+
+    setData({...data, [name]: value});
+    console.log(data);
+  }
+
   return (
     <section  className="py-20">
       <div className="max-width">
@@ -29,18 +45,24 @@ const Login = () => {
             <label className="font-medium pb-2 text-lg">Email Address</label>
             <input
               type="email"
-              placeholder="abc@gmail.com"
-              className="border-solid border-2 border-offgrey  px-10  mb-4 py-3 rounded-lg  "
+              placeholder="Your Email Address"
+              className="border-solid border-2 border-offgrey   pr-10 pl-2 mb-4 py-3 rounded-lg  "
+              required
+              onChange={userData}
+              name = "email"
             />
 
             <label className="font-medium pb-2 text-lg">Password</label>
             <input
               type="password"
-              placeholder="............"
-              className="border-solid border-2 border-offgrey  px-10  mb-4 py-3  rounded-lg  "
+              placeholder="Your Password"
+              className="border-solid border-2 border-offgrey   pr-10 pl-2 mb-4 py-3  rounded-lg  "
+              required
+              onChange={userData}
+              name = "password"
             />
 
-            <button className="bg-[#B88E2F] text-white py-4 my-5 rounded-lg  ">
+            <button className="bg-[#B88E2F] text-white py-3 my-5 rounded-lg  ">
               <a className="text-lg">Login</a>
             </button>
 
