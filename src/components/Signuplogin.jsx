@@ -17,26 +17,26 @@ const Signuplogin = () => {
                 <input type="text" 
                 placeholder="abc.."
           
-          className="border-solid border-2 border-black  px-10 py-3 mb-4 rounded-lg  "/>
+          className="border-solid border-2 border-offgrey  px-10 py-3 mb-4 rounded-lg  "/>
 
 <label className="font-medium pb-2 text-lg">Last Name</label>
                 <input type="text" 
                 placeholder="abc.."
           
-          className="border-solid border-2 border-black  px-10  mb-4 py-3 rounded-lg  "/>
+          className="border-solid border-2 border-offgrey  px-10  mb-4 py-3 rounded-lg  "/>
 
 
 <label className="font-medium pb-2 text-lg">Email Address</label>
                 <input type="email" 
                 placeholder="abc@gmail.com"
  
- className="border-solid border-2 border-black  px-10  mb-4 py-3 rounded-lg  "/>
+ className="border-solid border-2 border-offgrey  px-10  mb-4 py-3 rounded-lg  "/>
               
 
                 <label className="font-medium pb-2 text-lg">Password</label>
                 <input type="password" 
                 placeholder="............"
-                className="border-solid border-2 border-black  px-10  mb-4 py-3  rounded-lg  "
+                className="border-solid border-2 border-offgrey  px-10  mb-4 py-3  rounded-lg  "
                 />
 
 

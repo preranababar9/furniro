@@ -59,7 +59,7 @@ const Contactpg = () => {
               <input
                 type="text"
                 placeholder="abc"
-                className="border-2 border-solid border-offgrey rounded-lg py-3 pr-40 pl-2"
+                className="border-2 border-solid border-offgrey rounded-lg py-3 w-full pl-2"
               />
             </div>
 
@@ -68,7 +68,7 @@ const Contactpg = () => {
               <input
                 type="email"
                 placeholder="abc@gmail.com"
-                className="border-2 border-solid border-offgrey rounded-lg py-3 pr-40 pl-2"
+                className="border-2 border-solid border-offgrey rounded-lg py-3 w-full pl-2"
               />
             </div>
 
