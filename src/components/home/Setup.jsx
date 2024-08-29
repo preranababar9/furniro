@@ -23,24 +23,24 @@ const Setup = () => {
           <h2 className="font-black font-bold text-3xl ">#FuniroFurniture</h2>
         </div>
 
-<div className="lg:w-full flex max-md:flex-col justify-between gap-x-3 items-center">
-        <div className="flex lg:w-[40%] w-full  items-center  lg:flex-wrap gap-6">
-                <img src={set1} alt=""  className="object-cover" />
-                <img src={set2} alt=""  className="object-cover"/>
+<div className="lg:w-full flex max-md:flex-col lg:justify-between gap-x-4 gap-y-4 items-center">
+        <div className="flex lg:w-[40%] w-full  items-center  flex-wrap  gap-3">
+                <img src={set1} alt=""  className="object-cover max-md:w-1/3 " />
+                <img src={set2} alt=""  className="object-cover lg:w-[84%] w-1/2"/>
                 <img src={set6} alt="" className="object-cover" />
-                <img src={set7} alt="" className="object-cover"/>
+                <img src={set7} alt="" className="object-cover lg:w-[65%] w-3/4 "/>
 
                
              
         </div>
         
-        <img src={set3} alt=""  className="w-1/4 object-cover"/>
+        <img src={set3} alt=""  className="lg:w-1/4 w-1/2 object-cover"/>
 
-        <div className="flex lg:w-[40%] w-full lg:flex-wrap gap-6">
-        <img src={set4} alt=""  className=""/>
+        <div className="flex lg:w-[40%] w-full max-md:flex-col max-md:items-center lg:flex-wrap gap-3">
+        <img src={set4} alt=""  className="w-[51%] max-md:w-2/3"/>
         <img src={set5} alt=""  className=""/>
-        <img src={set8} alt="" />
-        <img src={set9} alt="" />
+        <img src={set8} alt="" className="h-full" />
+        <img src={set9} alt="" className="w-1/2 max-md:w-2/3" />
         </div>
 
         </div>
