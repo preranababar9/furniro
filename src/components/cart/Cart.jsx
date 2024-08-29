@@ -6,7 +6,8 @@ const Cart = () => {
   return (
     <section className="py-20">
       <div className="max-width">
-        <div className="flex w-full max-md:flex-col lg:gap-5 gap-y-5">
+
+        <div className="flex w-full max-lg:hidden lg:gap-5 gap-y-5">
           {/* cart columns div */}
           <table className="table-fixed lg:w-3/4  ">
             {/* title  */}

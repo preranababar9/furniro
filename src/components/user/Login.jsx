@@ -11,7 +11,12 @@ const Login = () => {
       password : ""
     }
   );
+// const isAuthentate =  signInWithFirebase(data.us)
+// if isAuth === true {
 
+// }else{
+
+// }
   const userData = (e) => {
     const {name , value} = e.target;
 
