@@ -20,9 +20,9 @@ function App() {
 
     
        <Inspire />
-     {/*   <Setup/>
+     {/*   <Setup/> */}
 
-      <Footer /> */}
+      <Footer />
     
     </>
   );
