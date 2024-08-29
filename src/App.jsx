@@ -13,15 +13,15 @@ import Setup from "./components/home/Setup";
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Hero />
 
-      <Range />
+      {/* <Range />
 
       <Inspire />
-      {/* <Setup/> */}
+      <Setup/>
 
-      <Footer />
+      <Footer /> */}
     
     </>
   );
