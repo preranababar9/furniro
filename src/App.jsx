@@ -18,9 +18,9 @@ function App() {
 
      <Range />
 
-     {/* 
+    
        <Inspire />
-      <Setup/>
+     {/*   <Setup/>
 
       <Footer /> */}
     

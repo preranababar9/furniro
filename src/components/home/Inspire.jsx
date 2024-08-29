@@ -12,10 +12,11 @@ import "swiper/css/pagination";
 
 const Inspire = () => {
   return (
-    <section className="py-10">
-      <div className="bg-pink flex max-md:flex-col max-md:gap-y-4 items-center py-10">
-        <div className="lg:w-1/3 lg:pl-36  max-md:px-10">
-          <h3 className="text-4xl max-md:text-3xl text-[#3A3A3A] pb-3 font-bold font-regular">
+    <section className="py-10 bg-pink ">
+      <div className="flex max-md:flex-col  max-width gap-10 max-md:gap-y-10 items-center py-10">
+
+        <div className="  max-md:px-10 lg:w-1/2">
+          <h3 className="text-5xl max-md:text-3xl text-[#3A3A3A] pb-3 font-bold font-regular">
             50+ Beautiful rooms inspiration
           </h3>
           <p className="text-[#616161]  font-semibold pb-8">
@@ -23,13 +24,13 @@ const Inspire = () => {
             inspire you
           </p>
 
-          <button className="bg-brown  text-white px-8 uppercase font-bold text-sm py-4">
+          <button className="bg-brown  text-white px-8 max-md:px-4 max-md:py-3 uppercase font-bold text-sm py-4">
             Explore More
           </button>
         </div>
 
         <Swiper
-          spaceBetween={10}
+          spaceBetween={20}
           slidesPerView={2}
           pagination={{
             dynamicBullets: true,
@@ -37,7 +38,7 @@ const Inspire = () => {
           modules={[Pagination]}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-          className="h-full flex max-md:flex-col w-[60%] max-md:gap-y-4 gap-4 "
+          className="h-full flex max-md:flex-col lg:w-[80%]  w-full max-md:gap-y-4 gap-4 "
         >
           <SwiperSlide>
             {" "}
@@ -46,7 +47,7 @@ const Inspire = () => {
 
           <SwiperSlide>
             {" "}
-            <img src={slide2} alt="" className="object-cover" />
+            <img src={slide2} alt="" className="object-cover " />
           </SwiperSlide>
 
           <SwiperSlide>
