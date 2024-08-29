@@ -27,7 +27,7 @@ const Signup = () => {
     try {
       const isAuthenticated = await signUpWithFirebase(user.email, user.password)
       const response = await AddUser(user);
-      toast.success("Registered Successfully");
+      toast.success(" Account Created Successfully! ");
       router("/home");
     } catch (error) {
       console.log(error);
