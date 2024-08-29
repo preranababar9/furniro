@@ -12,7 +12,8 @@ import "swiper/css/pagination";
 
 const Inspire = () => {
   return (
-    <section className="py-10 bg-pink ">
+    <section className="py-10 ">
+      <div className="bg-pink">
       <div className="flex max-md:flex-col  max-width gap-10 max-md:gap-y-10 items-center py-10">
 
         <div className="  max-md:px-10 lg:w-1/2">
@@ -55,6 +56,7 @@ const Inspire = () => {
             <img src={slide2} alt="" className="object-cover" />
           </SwiperSlide>
         </Swiper>
+      </div>
       </div>
     </section>
   );
