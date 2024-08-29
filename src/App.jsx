@@ -18,7 +18,8 @@ function App() {
 
      <Range />
 
-     {/*   <Inspire />
+     {/* 
+       <Inspire />
       <Setup/>
 
       <Footer /> */}

@@ -72,7 +72,7 @@ const Header = () => {
         {menu && (
           <div className="flex flex-col absolute left-0 top-0 pt-24 px-16  z-10 bg-white gap-y-3  h-[100vh] w-full  items-start">
             <div>
-              <ul className="flex flex-col gap-5 font-black font-normal text-xl justify-start ">
+              <ul className="flex flex-col gap-5 font-black font-normal text-2xl justify-start ">
                 <li className="hover:underline hover:underline-offset-4 hover:scale-105">
                   <Link to="/home">Home</Link>
                 </li>
