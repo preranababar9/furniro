@@ -16,9 +16,9 @@ function App() {
       <Header />
       <Hero />
 
-      {/* <Range />
+     <Range />
 
-      <Inspire />
+     {/*   <Inspire />
       <Setup/>
 
       <Footer /> */}

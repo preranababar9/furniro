@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import navlogo from "/logo/navlogo.svg";
 import { IoMenu } from "react-icons/io5";
@@ -10,6 +10,16 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [toggle]);
+
   return (
     <div>
       <div className="flex justify-between   max-width  py-4 items-center ">
@@ -40,6 +50,7 @@ const Header = () => {
               className="md:hidden"
               onClick={() => {
                 setMenu(true);
+                setToggle(true);
               }}
             >
               {" "}
@@ -50,6 +61,7 @@ const Header = () => {
               className="md:hidden "
               onClick={() => {
                 setMenu(false);
+                setToggle(false);
               }}
             >
               {" "}
@@ -80,11 +92,11 @@ const Header = () => {
                   <Link to="/contact">Contact</Link>
                 </li>
               </ul>
-
-             
             </div>
 
-            <button  className="bg-black text-white font-semibold py-3 px-4 mt-4 rounded-lg"><Link to="/register">SignUp / Login</Link></button>
+            <button className="bg-black text-white font-semibold py-3 px-4 mt-4 rounded-lg">
+              <Link to="/register">SignUp / Login</Link>
+            </button>
           </div>
         )}
 
