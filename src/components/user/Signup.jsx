@@ -5,6 +5,7 @@ import { AddProduct } from "../../../services/products";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AddUser, signUpWithFirebase } from "../../../services/users";
+import { auth } from "../../../config/firebase";
 
 const Signup = () => {
   const router = useNavigate();
@@ -16,22 +17,27 @@ const Signup = () => {
   });
 
   const handleUser = (e) => {
-    const { name, value } = e.target; //destruting
+    const { name, value } = e.target; //destructing
 
     setUser({ ...user, [name]: value });
     console.log(user);
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); //form gets refresh so this form didn't get refresh
+    e.preventDefault(); //form gets refresh so this prevent that 
     try {
       const isAuthenticated = await signUpWithFirebase(user.email, user.password)
       const response = await AddUser(user);
-      toast.success(" Account Created Successfully! ");
+      const userinfo = auth.currentUser;
+      toast.success(" Account Created Successfully! " , {
+        position:"top-center",
+      });
       router("/home");
     } catch (error) {
       console.log(error);
-      toast.error("Something went Wrong");
+      toast.error("Something went Wrong", {
+        position : "bottom-center",
+      });
       return error;
     }
   };

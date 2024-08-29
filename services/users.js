@@ -1,5 +1,6 @@
 import {
   createUserWithEmailAndPassword,
+  getAuth,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { db } from "../config/firebase";
@@ -7,6 +8,7 @@ import { auth } from "../config/firebase";
 
 export const signUpWithFirebase = async (email, password) => {
   try {
+    const auth = getAuth();
     await createUserWithEmailAndPassword(auth, email, password);
     return true;
   } catch (error) {
@@ -17,6 +19,7 @@ export const signUpWithFirebase = async (email, password) => {
 
 export const signInWithFirebase = async (email, password) => {
   try {
+   
     await signInWithEmailAndPassword(auth, email, password);
     return true;
   } catch (error) {
