@@ -1,11 +1,38 @@
 import React from "react";
 import set4 from "/images/set4.svg";
 import { MdDelete } from "react-icons/md";
+import { RxCrossCircled } from "react-icons/rx";
 
 const Cart = () => {
   return (
     <section className="py-20">
       <div className="max-width">
+        {/* for small screens */}
+
+        <div className="lg:hidden">
+          <h4 className="text-center text-2xl font-bold mb-20">
+            Shopping Cart
+          </h4>
+        
+
+          <div>
+          <div className="flex  gap-10 justify-center items-center">
+            <img src={set4} alt="" className="w-1/4  rounded-lg " />  
+
+            <div className="flex flex-col gap-y-5">
+              <p className="text-lg font-semibold">Queen Size Bed</p>
+              <p className="text-md">1 X Rs.1,00,000</p>
+            </div>
+
+            <RxCrossCircled size={28} />
+
+        
+          </div>
+
+          
+
+          </div>
+        </div>
 
         <div className="flex w-full max-lg:hidden lg:gap-5 gap-y-5">
           {/* cart columns div */}
@@ -90,4 +117,3 @@ const Cart = () => {
 };
 
 export default Cart;
-

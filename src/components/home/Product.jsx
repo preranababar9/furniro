@@ -15,17 +15,21 @@ const Product = () => {
         <div className="flex  flex-wrap justify-evenly  gap-y-4">
           {product.map((item, index) => (
             <div key={index} className="flex flex-col relative items-center">
-              <img src={product1} alt="" />
+              <img src={item.productimg} alt="" />
 
               <div className="bg-offwhite w-full px-4 py-5 ">
                 <h3 className="font-medium font-semibold text-xl pb-1">
-                  Syltherine
+                  {item.title}
                 </h3>
-                <p className="text-grey text-md pb-1">Stylish cafe chair</p>
-                <p className="">Rp 2,500,000</p>
+                <p className="text-grey text-md pb-1">{item.desc}</p>
+                <p className="">{item.price}</p>
               </div>
 
+              </div>
 
+           
+       
+))}
 
 {/* layer 
               <div className="bg-[#3A3A3A] absolute bottom-0 left-0 overflow-hidden right-0 w-full px-4 py-10 ">
@@ -45,11 +49,7 @@ const Product = () => {
         </div>
       </div>
       */}
-            </div>
-
-           
-       
-          ))}
+         
 
          
 
