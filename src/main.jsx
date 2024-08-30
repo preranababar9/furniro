@@ -14,6 +14,7 @@ import Contactpage from './pages/Contactpage.jsx';
 import Cartpage from './pages/Cartpage.jsx';
 import Register from './pages/Register.jsx';
 import Userloginpage from './pages/Userloginpage.jsx';
+import Admin from "./pages/Admin.jsx";
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Userloginpage/>,
+  },
+  {
+    path: "admin",
+    element: <Admin/>,
   },
 ]);
 
