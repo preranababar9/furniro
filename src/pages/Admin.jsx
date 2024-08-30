@@ -3,10 +3,14 @@ import navlogo from "/logo/navlogo.svg";
 import { Link } from "react-router-dom";
 import { TbCategory } from "react-icons/tb";
 import { GoProjectSymlink } from "react-icons/go";
+import Categoryform from "../components/adminform/Categoryform";
+import { Outlet } from "react-router-dom";
 
 const Admin = () => {
   return (
     <section className="">
+        <div className="flex  ">
+        <div></div>
       <div className="px-12 bg-blue-200 h-[100vh] w-1/4">
         <div className=" pt-4 pb-12">
           <img
@@ -20,7 +24,7 @@ const Admin = () => {
         <ul className="flex flex-col gap-12 text-2xl items-start font-semibold">
           <div className="flex gap-4 items-center">
             <TbCategory size={40} />
-            <Link to="/category">Category</Link>
+            <Link to={'admin/category'}  > Category</Link>
           </div>
 
           <div className="flex gap-4 items-center">
@@ -28,6 +32,9 @@ const Admin = () => {
           <Link to="/productform">Product Details</Link>
           </div>
         </ul>
+      </div>
+
+      <Categoryform/>
       </div>
     </section>
   );

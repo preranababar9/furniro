@@ -15,6 +15,7 @@ import Cartpage from './pages/Cartpage.jsx';
 import Register from './pages/Register.jsx';
 import Userloginpage from './pages/Userloginpage.jsx';
 import Admin from "./pages/Admin.jsx";
+import Categoryform from "./components/adminform/Categoryform.jsx";
 
 
 const router = createBrowserRouter([
@@ -49,7 +50,14 @@ const router = createBrowserRouter([
   {
     path: "admin",
     element: <Admin/>,
+    children: [
+      {
+        path: "admin/:category",
+        element: <Categoryform/>,
+      },
+    ],
   },
+ 
 ]);
 
 createRoot(document.getElementById('root')).render(

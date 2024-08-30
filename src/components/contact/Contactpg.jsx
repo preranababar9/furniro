@@ -63,7 +63,7 @@ const Contactpg = () => {
               />
             </div>
 
-            <div className="flex flex-col gap-y-2 pb-5">
+            <div className="flex flex-col gap-y-2 w-full pb-5">
               <label>Email Address</label>
               <input
                 type="email"
