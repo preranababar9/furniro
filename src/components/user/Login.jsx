@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 import { auth } from "../../../config/firebase";
 
 const Login = () => {
-
   const router = useNavigate();
   const [data, setData] = useState({
     email: "",
@@ -18,18 +17,22 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const isLogin = await signInWithFirebase( data.email, data.password);
-    
-      console.log(userinfo);
-      
-      toast.success("Login successfull!", {
-        position:"top-center",
-      });
-      router("/home");
+      const isLogin = await signInWithFirebase(data.email, data.password);
+
+      // console.log(userinfo);
+      if (isLogin) {
+        localStorage.setItem(data.email);
+        toast.success("Login successfull!", {
+          position: "top-center",
+        });
+        router("/home");
+      } else {
+        toast.error("Incorrect Creds");
+      }
     } catch (error) {
       console.log(error);
       toast.error(error.message, {
-        position : "bottom-center",
+        position: "bottom-center",
       });
       return error;
     }
@@ -45,46 +48,47 @@ const Login = () => {
   return (
     <section className="py-20">
       <div className="max-width">
-
         <form onSubmit={handleSubmitLogin}>
-        <div className="flex  items-center">
-          <div className="w-1/2 mr-36 max-md:hidden">
-            <img src={login} alt="" />
-          </div>
-
-          <div className="flex flex-col w-1/3 max-md:w-full">
-            <div className="flex  gap-3">
-              <h4 className="text-3xl font-black font-bold pb-2">Welcome</h4>
-              <PiHandWavingDuotone size={32} className="text-yellow-500" />
+          <div className="flex  items-center">
+            <div className="w-1/2 mr-36 max-md:hidden">
+              <img src={login} alt="" />
             </div>
-            <p className="text-md text-offgrey pb-6">Please login here</p>
 
-            <label className="font-medium pb-2 text-lg">Email Address</label>
-            <input
-              type="email"
-              placeholder="Your Email Address"
-              className="border-solid border-2 border-offgrey   pr-10 pl-2 mb-4 py-3 rounded-lg  "
-              required
-              onChange={userData}
-              name="email"
-            />
+            <div className="flex flex-col w-1/3 max-md:w-full">
+              <div className="flex  gap-3">
+                <h4 className="text-3xl font-black font-bold pb-2">Welcome</h4>
+                <PiHandWavingDuotone size={32} className="text-yellow-500" />
+              </div>
+              <p className="text-md text-offgrey pb-6">Please login here</p>
 
-            <label className="font-medium pb-2 text-lg">Password</label>
-            <input
-              type="password"
-              placeholder="Your Password"
-              className="border-solid border-2 border-offgrey   pr-10 pl-2 mb-4 py-3  rounded-lg  "
-              required
-              onChange={userData}
-              name="password"
-            />
+              <label className="font-medium pb-2 text-lg">Email Address</label>
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                className="border-solid border-2 border-offgrey   pr-10 pl-2 mb-4 py-3 rounded-lg  "
+                required
+                onChange={userData}
+                name="email"
+              />
 
-            <button   type="submit"
-            className="bg-[#B88E2F] text-white py-3 my-5 rounded-lg  text-lg">
-              Login
+              <label className="font-medium pb-2 text-lg">Password</label>
+              <input
+                type="password"
+                placeholder="Your Password"
+                className="border-solid border-2 border-offgrey   pr-10 pl-2 mb-4 py-3  rounded-lg  "
+                required
+                onChange={userData}
+                name="password"
+              />
+
+              <button
+                type="submit"
+                className="bg-[#B88E2F] text-white py-3 my-5 rounded-lg  text-lg"
+              >
+                Login
               </button>
+            </div>
           </div>
-        </div>
         </form>
       </div>
     </section>

@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import range1 from "/images/range1.svg";
 import range2 from "/images/range2.svg";
 import range3 from "/images/range3.svg";
+import { getAllCategoryData } from "../../../services/categories";
 
 const Range = () => {
+  const [categoryData, setCategoryData] = useState([]);
+
+  const getCategoryData = async () => {
+    try {
+      const response = await getAllCategoryData();
+      setCategoryData(response);
+      console.log(response);
+      
+    } catch (error) {
+      console.log(error);
+      return error;
+    }
+  };
+
+  useEffect(() => {
+    console.log("hjfjhf");
+    
+    getCategoryData;
+  }, []);
+
+  console.log(categoryData);
+  
   return (
     <section className="py-20">
       <div className="max-width">
@@ -41,5 +64,5 @@ const range = [
   {
     img: range3,
     name: "Bedroom",
-  }
+  },
 ];

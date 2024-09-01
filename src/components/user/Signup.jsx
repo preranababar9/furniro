@@ -24,19 +24,23 @@ const Signup = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); //form gets refresh so this prevent that 
+    e.preventDefault(); //form gets refresh so this prevent that
     try {
-      const isAuthenticated = await signUpWithFirebase(user.email, user.password)
+      const isAuthenticated = await signUpWithFirebase(
+        user.email,
+        user.password
+      );
+      console.log(isAuthenticated);
       const response = await AddUser(user);
       const userinfo = auth.currentUser;
-      toast.success(" Account Created Successfully! " , {
-        position:"top-center",
+      toast.success(" Account Created Successfully! ", {
+        position: "top-center",
       });
       router("/home");
     } catch (error) {
       console.log(error);
       toast.error("Something went Wrong", {
-        position : "bottom-center",
+        position: "bottom-center",
       });
       return error;
     }

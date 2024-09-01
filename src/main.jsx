@@ -52,7 +52,7 @@ const router = createBrowserRouter([
     element: <Admin/>,
     children: [
       {
-        path: "admin/:category",
+        path: "category",
         element: <Categoryform/>,
       },
     ],
