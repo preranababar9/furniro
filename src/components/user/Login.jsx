@@ -21,7 +21,7 @@ const Login = () => {
 
       // console.log(userinfo);
       if (isLogin) {
-        localStorage.setItem(data.email);
+        localStorage.setItem(data.email, data.password);
         toast.success("Login successfull!", {
           position: "top-center",
         });
