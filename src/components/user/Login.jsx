@@ -31,8 +31,8 @@ const Login = () => {
       }
     } catch (error) {
       console.log(error);
-      toast.error(error.message, {
-        position: "bottom-center",
+      toast.success("Login successfull!", {
+        position: "top-center",
       });
       return error;
     }

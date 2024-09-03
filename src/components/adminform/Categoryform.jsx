@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Admin from "../../pages/Admin";
 import { addCategory } from "../../../services/categories";
 import { v4 } from "uuid";
+import { toast } from "react-toastify";
 
 const Categoryform = () => {
   const [data, setData] = useState({
@@ -17,8 +18,14 @@ e.preventDefault();
         id: v4(),
       };
       await addCategory(d);
+      toast.success("Category added successfully!", {
+        position: "top-center",
+      });
     } catch (error) {
       console.log(error);
+      toast.success("Some Error Occurred!", {
+        position: "top-center",
+      });
       return error;
     }
   };
