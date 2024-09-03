@@ -7,19 +7,19 @@ const ProductDetail = () => {
   return (
         <section className='py-20 '>
     <div className='max-width'>
-      <div className='flex '>
+      <div className='flex max-md:flex-col gap-y-5 '>
         {/* images */}
-<div className='w-1/2'>
-        <div className='h-full w-4/5 py-16 px-2 bg-pink'>
+<div className='lg:w-1/2'>
+        <div className='h-full lg:w-4/5 lg:py-16  py-10 px-2 bg-pink'>
 <img src={sofa} alt="" className='h-full' /></div>
 </div>
 
 {/* descpritions */}
 
-<div className='w-1/2'>
-       <h2 className='text-4xl pb-4'>Agorda Sofa</h2>
-       <p  className='text-2xl text-offgrey pb-4'>Rs.2,50,000</p>
-       <p  className='text-md w-3/4 pb-6'>Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.</p>
+<div className='lg:w-1/2'>
+       <h2 className='text-4xl  pb-4'>Agorda Sofa</h2>
+       <p  className='text-2xl  text-offgrey pb-4'>Rs.2,50,000</p>
+       <p  className='text-md lg:w-3/4 pb-6'>Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.</p>
 
 <p className='text-lg tracking-wide pb-4 text-offgrey '>Size</p>
 <div className='flex gap-5 pb-6'>
@@ -35,16 +35,16 @@ const ProductDetail = () => {
         <button className='rounded-full bg-black h-8 w-8 text-brown'></button>
 </div>
 
-<div className='flex gap-10 items-center'>
-        <div className='flex items-center gap-6 border-2 border-solid border-offgrey rounded-lg w-1/4 py-3  justify-center'>
+<div className='flex flex-wrap gap-10 items-center'>
+        <div className='flex items-center gap-6 border-2 border-solid border-offgrey rounded-lg lg:w-1/4  w-1/2 py-3 max-md:px-10  justify-center'>
         {/* quantity */}
         <button className='   '><FaMinus size={16} /></button>
-       <input type="number" placeholder='1' className='w-1/4 pl-4 text-lg'/>
+       <input type="number" placeholder='1' className='lg:w-1/4 w-full pl-4 text-lg'/>
         <button className='   '><MdAdd size={20}  /></button>
         </div>
 
         <div>
-                <button className='border-2 border-solid border-black text-lg rounded-lg w-full px-10 py-3'>Add to Cart</button>
+                <button className='border-2 border-solid border-black lg:text-lg rounded-lg w-full lg:px-10 px-2 py-3'>Add to Cart</button>
         </div>
 </div>
 
