@@ -33,7 +33,7 @@ const Signup = () => {
       );
       console.log(isAuthenticated);
       const response = await AddUser(user);
-      // const userinfo = auth.currentUser;
+
       toast.success(" Account Created Successfully! ", {
         position: "top-center",
       });
