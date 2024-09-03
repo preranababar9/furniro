@@ -27,7 +27,7 @@ const Admin = () => {
 
             <div className="flex gap-4 items-center">
               <GoProjectSymlink size={40} />
-              <Link to="/product">Product Details</Link>
+              <Link to="/admin/product">Product Details</Link>
             </div>
           </ul>
         </div>
