@@ -9,6 +9,7 @@ import { auth } from "../../../config/firebase";
 
 const Signup = () => {
   const router = useNavigate();
+
   const [user, setUser] = useState({
     fname: "",
     lname: "",
@@ -32,7 +33,7 @@ const Signup = () => {
       );
       console.log(isAuthenticated);
       const response = await AddUser(user);
-      const userinfo = auth.currentUser;
+      // const userinfo = auth.currentUser;
       toast.success(" Account Created Successfully! ", {
         position: "top-center",
       });
