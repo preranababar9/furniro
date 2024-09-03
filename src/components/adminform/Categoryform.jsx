@@ -15,7 +15,7 @@ e.preventDefault();
     try {
       const d = {
         ...data,
-        id: v4(),
+        id: v4(), // for getting unique id 
       };
       await addCategory(d);
       toast.success("Category added successfully!", {

@@ -41,10 +41,10 @@ const Header = () => {
         </ul>
 
         <div className="flex z-30 gap-5">
-          <button>
+          {/* <button>
             {" "}
             <IoIosSearch size={28} className="font-bold  md:hidden" />
-          </button>
+          </button> */}
           {!menu ? (
             <button
               className="md:hidden"
@@ -104,7 +104,7 @@ const Header = () => {
           <Link to="/register">
             <MdOutlineAccountCircle size={28} />
           </Link>
-          <IoIosSearch size={28} />
+          {/* <IoIosSearch size={28} /> */}
 
           <Link>
             <FaRegHeart size={24} />
