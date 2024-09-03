@@ -21,9 +21,10 @@ e.preventDefault();
       toast.success("Category added successfully!", {
         position: "top-center",
       });
+    
     } catch (error) {
       console.log(error);
-      toast.success("Some Error Occurred!", {
+      toast.error("Some Error Occurred!", {
         position: "top-center",
       });
       return error;
@@ -34,7 +35,7 @@ e.preventDefault();
     <section className="py-10 w-4/5">
       <div className="">
         <div className="">
-          <form onSubmit={setCategory} className="flex flex-wrap gap-5">
+          <form onSubmit={setCategory} className="flex items-center flex-wrap gap-5">
             <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
               <label class="block text-gray-700 text-sm font-bold mb-2">
                 Category Title
@@ -73,7 +74,7 @@ e.preventDefault();
               />
             </div> */}
 
-            <button type="submit">submit</button>
+            <button type="submit" className="bg-black text-white px-6 mt-3 py-3">submit</button>
           </form>
         </div>
       </div>
