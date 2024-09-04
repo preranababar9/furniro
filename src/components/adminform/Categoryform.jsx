@@ -4,6 +4,9 @@ import { addCategory } from "../../../services/categories";
 import { v4 } from "uuid";
 import { toast } from "react-toastify";
 import { db } from "../../../config/firebase";
+import { ref, uploadBytes } from "firebase/storage";
+import { storage } from "../../../config/firebase";
+import { addFile } from "../../../utilis/file";
 
 const Categoryform = () => {
   const [data, setData] = useState({
@@ -13,17 +16,20 @@ const Categoryform = () => {
   });
 
   const setCategory = async (e) => {
-e.preventDefault();
+    e.preventDefault();
     try {
+      const url = await addFile(data.imageUrl, `categories/${v4()}`, v4());
+      setData({ ...data, imageUrl: url });
+
       const d = {
         ...data,
-        id: v4(), // for getting unique id 
+        id: v4(), // for getting unique id
       };
       await addCategory(d);
+
       toast.success("Category added successfully!", {
         position: "top-center",
       });
-    
     } catch (error) {
       console.log(error);
       toast.error("Some Error Occurred!", {
@@ -37,7 +43,10 @@ e.preventDefault();
     <section className="py-10 w-4/5">
       <div className="">
         <div className="">
-          <form onSubmit={setCategory} className="flex items-center flex-wrap gap-5">
+          <form
+            onSubmit={setCategory}
+            className="flex items-center flex-wrap gap-5"
+          >
             <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
               <label class="block text-gray-700 text-sm font-bold mb-2">
                 Category Title
@@ -64,7 +73,7 @@ e.preventDefault();
               />
             </div>
 
-             <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
+            <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
               <label class="block text-gray-700 text-sm font-bold mb-2">
                 Category Image
               </label>
@@ -72,12 +81,19 @@ e.preventDefault();
                 class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
                 placeholder="Category Image"
                 type="file"
-                value={data.imageUrl}
-               onChange={(e) => setData(e.target.value[0])}
+                // value={data.imageUrl}
+                onChange={(e) =>
+                  setData({ ...data, imageUrl: e.target.files[0] })
+                }
               />
-            </div> 
+            </div>
 
-            <button type="submit" className="bg-black text-white px-6 mt-3 py-3">submit</button>
+            <button
+              type="submit"
+              className="bg-black text-white px-6 mt-3 py-3"
+            >
+              submit
+            </button>
           </form>
         </div>
       </div>
