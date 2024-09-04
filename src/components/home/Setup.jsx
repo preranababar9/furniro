@@ -42,6 +42,8 @@ const Setup = () => {
         <img src={set5} alt="" className="h-60 w-58 object-cover mr-10 " />
         <img src={set8} alt="" className="h-60 w-58 object-cover mr-10 " />
         <img src={set9} alt="" className="h-60 w-48 object-cover mr-10 " />
+        <img src={set5} alt="" className="h-60 w-58 object-cover mr-10 " />
+        <img src={set8} alt="" className="h-60 w-58 object-cover mr-10 " />
         </Marquee> 
       </div>
     </section>

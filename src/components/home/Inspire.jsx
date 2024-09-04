@@ -1,6 +1,10 @@
 import React from "react";
 import slide1 from "/images/slide1.svg";
 import slide2 from "/images/slide2.svg";
+import set1 from "/images/set1.jpg";
+import slide4 from "/images/slide4.svg";
+import slide5 from "/images/slide5.svg";
+import slide6 from "/images/slide6.svg";
 // import Swiper JS
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Swiper styles
@@ -43,18 +47,29 @@ const Inspire = () => {
         >
           <SwiperSlide>
             {" "}
-            <img src={slide1} alt="" className="object-cover " />
+            <img src={slide1} alt="" className="lg:h-[550px] h-[250px] object-cover lg:w-96 w-full"  />
           </SwiperSlide>
 
           <SwiperSlide>
-            {" "}
-            <img src={slide2} alt="" className="object-cover " />
+            <img src={slide4} alt="" className="lg:h-[550px] h-[250px] object-cover lg:w-96 w-full" />
           </SwiperSlide>
 
+          
           <SwiperSlide>
-            {" "}
-            <img src={slide2} alt="" className="object-cover" />
+            <img src={slide5} alt="" className="lg:h-[550px] h-[250px] object-cover lg:w-96 w-full"/>
           </SwiperSlide>
+
+          
+          <SwiperSlide>
+            <img src={slide6} alt="" className="lg:h-[550px] h-[250px] object-cover lg:w-96 w-full"/>
+          </SwiperSlide>
+         
+
+          <SwiperSlide>
+            <img src={set1} alt="" className="lg:h-[550px] h-[250px] object-cover lg:w-96 w-full"/>
+          </SwiperSlide>
+
+         
         </Swiper>
       </div>
       </div>
