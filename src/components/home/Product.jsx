@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import product1 from "/images/product1.svg";
 import share from "/icons/share.svg";
 import compare from "/icons/compare.svg";
 import heart from "/icons/heart.svg";
+import { getAllProducts } from "../../../services/products";
 
 const Product = () => {
+
+  const [data, setData] = useState([]);
+
+  const fetchProduct = async () => {
+    try {
+      const response = await getAllProducts();
+      setData(response);
+      console.log(response);
+      
+    } catch (error) {
+      console.log(error);
+      return error;
+      
+    }
+  }
+
+  useEffect(() => {
+    console.log("hello");
+
+    fetchProduct();
+    
+  }) 
+
+  console.log(data);
+  
+
   return (
     <section className="py-20">
       <div className="max-width">
@@ -13,15 +40,15 @@ const Product = () => {
         </div>
 
         <div className="flex  flex-wrap justify-evenly  gap-y-4">
-          {product.map((item, index) => (
+          {data.map((item, index) => (
             <div key={index} className="flex flex-col relative items-center">
-              <img src={item.productimg} alt="" />
+              <img src={item.imageUrl} alt="" />
 
               <div className="bg-offwhite w-full px-4 py-5 ">
                 <h3 className="font-medium font-semibold text-xl pb-1">
                   {item.title}
                 </h3>
-                <p className="text-grey text-md pb-1">{item.desc}</p>
+                <p className="text-grey text-md pb-1">{item.shortdesc}</p>
                 <p className="">{item.price}</p>
               </div>
 
@@ -65,53 +92,3 @@ const Product = () => {
 
 export default Product;
 
-const product = [
-  {
-    productimg: product1,
-    title: "Syltherine",
-    desc: " Stylish cafe chair",
-    price: "Rp 2,500,000",
-  },
-  {
-    productimg: product1,
-    title: "Syltherine",
-    desc: " Stylish cafe chair",
-    price: "Rp 2,500,000",
-  },
-  {
-    productimg: product1,
-    title: "Syltherine",
-    desc: " Stylish cafe chair",
-    price: "Rp 2,500,000",
-  },
-  {
-    productimg: product1,
-    title: "Syltherine",
-    desc: " Stylish cafe chair",
-    price: "Rp 2,500,000",
-  },
-  {
-    productimg: product1,
-    title: "Syltherine",
-    desc: " Stylish cafe chair",
-    price: "Rp 2,500,000",
-  },
-  {
-    productimg: product1,
-    title: "Syltherine",
-    desc: " Stylish cafe chair",
-    price: "Rp 2,500,000",
-  },
-  {
-    productimg: product1,
-    title: "Syltherine",
-    desc: " Stylish cafe chair",
-    price: "Rp 2,500,000",
-  },
-  {
-    productimg: product1,
-    title: "Syltherine",
-    desc: " Stylish cafe chair",
-    price: "Rp 2,500,000",
-  },
-];

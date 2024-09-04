@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { v4 } from "uuid";
 import { toast } from "react-toastify";
 import { AddProduct } from "../../../services/products";
+import { addFile } from "../../../utilis/file";
 
 const ProductDetailform = () => {
   const [product, setProduct] = useState({
@@ -9,13 +10,23 @@ const ProductDetailform = () => {
     shortdesc: "",
     des: "",
     price: "",
+    imageUrl: "",
   });
 
   const setData = async (e) => {
     e.preventDefault();
     try {
+
+      const url = await addFile(product.imageUrl, `productImg/${v4()}`, v4());
+      setProduct({...product, imageUrl: url});
+
       const p = {
-        ...product,
+        title:product.title,
+        shortdesc:product.shortdesc,
+        des : product.des,
+        price : product.price,
+        imageUrl: url,
+
         id: v4(),
       };
       await AddProduct(p);
@@ -87,10 +98,25 @@ const ProductDetailform = () => {
               <input
                 class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
                 placeholder=" Enter Product Price"
-                type="number"
+                type="text"
                 value={product.price}
                 onChange={(e) =>
                   setProduct({ ...product, price: e.target.value })
+                }
+              />
+            </div>
+
+            <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                Product Image
+              </label>
+              <input
+                class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                placeholder=" Enter Product Price"
+                type="file"
+              
+                onChange={(e) =>
+                  setProduct({ ...product, imageUrl: e.target.files[0] })
                 }
               />
             </div>
@@ -99,7 +125,7 @@ const ProductDetailform = () => {
               type="submit"
               className="bg-black text-white px-6 mt-5 py-3"
             >
-              submit
+              Submit
             </button>
           </form>
         </div>
