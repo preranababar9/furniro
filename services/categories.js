@@ -13,7 +13,7 @@ export const addCategory = async (data) => {//added into db
 export const getAllCategoryData = async () => { // fetching from db
   try {
     const response = await db.collection("category").get();
-    const categoryData = response.docs().map((doc) => doc.data());
+    const categoryData = response.docs.map((doc) =>  doc.data());
     return categoryData;
   } catch (error) {
     console.log(error);

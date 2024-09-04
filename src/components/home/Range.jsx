@@ -5,13 +5,13 @@ import range3 from "/images/range3.svg";
 import { getAllCategoryData } from "../../../services/categories";
 
 const Range = () => {
-  const [categoryData, setCategoryData] = useState([]);
+  const [data, setData] = useState([]);
 
-  const getCategoryData = async () => {
+  const fetchCategoryData = async () => {
     try {
-      const response = await getAllCategoryData();
-      setCategoryData(response);
-      console.log(response);
+      const categoryResponse = await getAllCategoryData();
+      setData(categoryResponse);
+      console.log(categoryResponse);
       
     } catch (error) {
       console.log(error);
@@ -19,13 +19,16 @@ const Range = () => {
     }
   };
 
+
   useEffect(() => {
     console.log("hjfjhf");
     
-    getCategoryData;
+    fetchCategoryData();
   }, []);
 
-  console.log(categoryData);
+  console.log(data);
+
+
   
   return (
     <section className="py-20">
@@ -38,10 +41,10 @@ const Range = () => {
         </div>
 
         <div className="flex  justify-around gap-y-10 flex-wrap">
-          {range.map((item, index) => (
+        {data.map((item, index) => (
             <div key={index} className="flex flex-col items-center">
-              <img src={item.img} alt="" className="object-cover" />
-              <p className="text-normal font-bold text-xl pt-6">{item.name}</p>
+              <img src={item.imageUrl} alt="" className="object-cover" />
+              <p className="text-normal font-bold text-xl pt-6">{item.title}</p>
             </div>
           ))}
         </div>
@@ -52,17 +55,3 @@ const Range = () => {
 
 export default Range;
 
-const range = [
-  {
-    img: range1,
-    name: "Dining",
-  },
-  {
-    img: range2,
-    name: "Living",
-  },
-  {
-    img: range3,
-    name: "Bedroom",
-  },
-];
