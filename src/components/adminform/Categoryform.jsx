@@ -22,7 +22,9 @@ const Categoryform = () => {
       setData({ ...data, imageUrl: url });
 
       const d = {
-        ...data,
+        title: data.title,
+        tag: data.tag,
+        imageUrl: url,
         id: v4(), // for getting unique id
       };
       await addCategory(d);
@@ -92,7 +94,7 @@ const Categoryform = () => {
               type="submit"
               className="bg-black text-white px-6 mt-3 py-3"
             >
-              submit
+              Submit
             </button>
           </form>
         </div>
