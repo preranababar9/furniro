@@ -3,9 +3,6 @@ import Admin from "../../pages/Admin";
 import { addCategory } from "../../../services/categories";
 import { v4 } from "uuid";
 import { toast } from "react-toastify";
-import { db } from "../../../config/firebase";
-import { ref, uploadBytes } from "firebase/storage";
-import { storage } from "../../../config/firebase";
 import { addFile } from "../../../utilis/file";
 
 const Categoryform = () => {

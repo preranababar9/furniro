@@ -36,7 +36,7 @@ const Range = () => {
         <div className="text-center pb-16">
           <h2 className="font-black font-bold text-3xl ">Browse The Range</h2>
           <p className="text-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Discover our exclusive range of stylish and functional furniture
           </p>
         </div>
 
