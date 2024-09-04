@@ -29,7 +29,7 @@ const Inspire = () => {
             inspire you
           </p>
 
-          <button className="bg-brown  text-white px-8 max-md:px-4 max-md:py-3 uppercase font-bold text-sm py-4">
+          <button  className="bg-brown  text-white px-8 max-md:px-4 max-md:py-3 uppercase font-bold text-sm py-4">
             Explore More
           </button>
         </div>
