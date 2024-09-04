@@ -42,7 +42,7 @@ const Product = () => {
         <div className="flex  flex-wrap justify-evenly  gap-y-4">
           {data.map((item, index) => (
             <div key={index} className="flex flex-col   relative items-center">
-              <img src={item.imageUrl} alt="" className="h-3/4 w-[300px] object-cover"/>
+              <img src={item.imageUrl} alt="" className="h-[300px] w-[300px] object-cover"/>
 
               <div className="bg-offwhite w-full px-4 py-5 ">
                 <h3 className="font-medium font-semibold text-xl pb-1">

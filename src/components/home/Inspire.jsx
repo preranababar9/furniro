@@ -69,7 +69,7 @@ const Inspire = () => {
             <img src={set1} alt="" className="lg:h-[550px] h-[250px] object-cover lg:w-96 w-full"/>
           </SwiperSlide>
 
-         
+          
         </Swiper>
       </div>
       </div>
