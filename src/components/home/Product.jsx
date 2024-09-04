@@ -4,9 +4,14 @@ import share from "/icons/share.svg";
 import compare from "/icons/compare.svg";
 import heart from "/icons/heart.svg";
 import { getAllProducts } from "../../../services/products";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
 
+  const router = useNavigate();
+  const redirect = () => {
+    router("/productdetail");
+  };
   const [data, setData] = useState([]);
 
   const fetchProduct = async () => {
@@ -14,23 +19,19 @@ const Product = () => {
       const response = await getAllProducts();
       setData(response);
       console.log(response);
-      
     } catch (error) {
       console.log(error);
       return error;
-      
     }
-  }
+  };
 
   useEffect(() => {
     console.log("hello");
 
     fetchProduct();
-    
-  }) 
+  });
 
   console.log(data);
-  
 
   return (
     <section className="py-20">
@@ -39,10 +40,15 @@ const Product = () => {
           <h2 className="font-black font-bold text-3xl ">Our Products</h2>
         </div>
 
-        <div className="flex  flex-wrap justify-evenly  gap-y-4">
+        <div  onClick={redirect}
+        className="flex  flex-wrap justify-evenly  gap-y-4">
           {data.map((item, index) => (
             <div key={index} className="flex flex-col   relative items-center">
-              <img src={item.imageUrl} alt="" className="h-[300px] w-[300px] object-cover"/>
+              <img
+                src={item.imageUrl}
+                alt=""
+                className="h-[300px] w-[300px] object-cover"
+              />
 
               <div className="bg-offwhite w-full px-4 py-5 ">
                 <h3 className="font-medium font-semibold text-xl pb-1">
@@ -51,14 +57,10 @@ const Product = () => {
                 <p className="text-grey text-md pb-1">{item.shortdesc}</p>
                 <p className="">{item.price}</p>
               </div>
+            </div>
+          ))}
 
-              </div>
-
-           
-       
-))}
-
-{/* layer 
+          {/* layer 
               <div className="bg-[#3A3A3A] absolute bottom-0 left-0 overflow-hidden right-0 w-full px-4 py-10 ">
         <button className="text-brown text-lg text-bold bg-blue-200 px-8 py-3">
           Add to Cart
@@ -76,19 +78,10 @@ const Product = () => {
         </div>
       </div>
       */}
-         
-
-         
-
-
-
         </div>
-
-       
       </div>
     </section>
   );
 };
 
 export default Product;
-
