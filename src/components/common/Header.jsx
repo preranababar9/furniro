@@ -80,7 +80,7 @@ const Header = () => {
                   <Link to="/shop">Shop</Link>
                 </li>
                 <li className="hover:underline hover:underline-offset-4 hover:scale-105">
-                  <Link>About</Link>
+                  <Link to="/about">About</Link>
                 </li>
                 <li className="hover:underline hover:underline-offset-4 hover:scale-105">
                   <Link to="">Wishlist</Link>
