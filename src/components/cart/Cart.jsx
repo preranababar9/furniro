@@ -2,8 +2,15 @@ import React from "react";
 import set4 from "/images/set4.svg";
 import { MdDelete } from "react-icons/md";
 import { RxCrossCircled } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+
+  const router = useNavigate();
+  const submit = () => {
+    router("/checkout");
+  };
+
   return (
     <section className="py-20">
       <div className="max-width">
@@ -106,7 +113,7 @@ const Cart = () => {
               <p className="text-lg font-semibold text-brown">Rs.1,00,000</p>
             </div>
 
-            <button className=" border-2 border-solid mt-10 py-3  w-2/5 px-1 rounded-full  border-black">
+            <button onClick={submit} className=" border-2 border-solid mt-10 py-3  w-2/5 px-1 rounded-full  border-black">
               Check out
             </button>
           </div>
