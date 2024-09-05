@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import sofa from "/images/sofa.svg";
 import { FaMinus } from "react-icons/fa6";
 import { MdAdd } from "react-icons/md";
@@ -7,7 +7,7 @@ const ProductDetail = () => {
   return (
     <section className="py-20 ">
       <div className="max-width">
-        <div className="flex max-md:flex-col gap-y-5 ">
+        <div key={index} className="flex max-md:flex-col gap-y-5 ">
           {/* images */}
           <div className="lg:w-1/2">
             <div className="h-full lg:w-4/5 lg:py-16  py-10 px-2 bg-pink">
@@ -18,14 +18,11 @@ const ProductDetail = () => {
           {/* descpritions */}
 
           <div className="lg:w-1/2">
-            <h2 className="text-4xl  pb-4">Agorda Sofa</h2>
-            <p className="text-2xl  text-offgrey pb-4">Rs.2,50,000</p>
-            <p className="text-md lg:w-3/4 pb-6">
-              Setting the bar as one of the loudest speakers in its class, the
-              Kilburn is a compact, stout-hearted hero with a well-balanced
-              audio which boasts a clear midrange and extended highs for a
-              sound.
-            </p>
+            {}
+            <h2 className="text-5xl font-regular pb-4">ashcgashc</h2>
+            <p className="text-xl  font-medium pb-4">scbv cnx</p>
+            <p className="text-xl  text-offgrey pb-4">sbcvNBX</p>
+            <p className="text-lg font-medium lg:w-3/4 pb-6">{item.des}</p>
 
             <p className="text-lg tracking-wide pb-4 text-offgrey ">Size</p>
             <div className="flex gap-5 pb-6">

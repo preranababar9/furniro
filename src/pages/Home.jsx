@@ -13,8 +13,9 @@ const Home = () => {
       <Header/>
       <Hero/>
       <Inspire/>
-      <Product/>
       <Range/>
+      <Product/>
+      
       <Setup/>
       <Footer/>
     </div>
