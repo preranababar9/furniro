@@ -18,6 +18,7 @@ import Admin from "./pages/Admin.jsx";
 import Categoryform from "./components/adminform/Categoryform.jsx";
 import ProductDetailform from "./components/adminform/ProductDetailform.jsx";
 import ProductDetailpage from "./pages/ProductDetailpage.jsx";
+import Aboutpage from "./pages/Aboutpage.jsx";
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "contact",
     element: <Contactpage/>,
+  },
+  {
+    path: "about",
+    element: <Aboutpage/>,
   },
   {
     path: "cart",
