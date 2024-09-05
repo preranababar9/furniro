@@ -5,28 +5,30 @@ import range3 from "/images/range3.svg";
 import { getAllCategoryData } from "../../../services/categories";
 
 const Range = () => {
-  const [data, setData] = useState([]);
+
+  const [rangeData, setRangeData] = useState([]);
 
   const fetchCategoryData = async () => {
     try {
       const categoryResponse = await getAllCategoryData();
-      setData(categoryResponse);
-      console.log(categoryResponse);
+      setRangeData(categoryResponse);
+      // console.log(categoryResponse);
       
     } catch (error) {
       console.log(error);
       return error;
     }
   };
+  
 
 
   useEffect(() => {
-    console.log("hjfjhf");
-    
+    console.log("Fetching category data");
     fetchCategoryData();
-  }, []);
+  }, []); // Dependency array ensures this runs only once
 
-  console.log(data);
+
+  // console.log(rangeData);
 
 
   
@@ -41,12 +43,19 @@ const Range = () => {
         </div>
 
         <div className="flex  justify-around gap-y-10 flex-wrap">
-        {data.map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
+        {rangeData.length > 0 ? (
+        rangeData.map((item, index) => (
+            <div key={index} 
+            className="flex flex-col items-center">
               <img src={item.imageUrl} alt="" className="object-cover" />
               <p className="text-normal font-bold text-xl pt-6">{item.title}</p>
-            </div>
-          ))}
+              </div>
+              ))
+              ):(
+                <p>not found</p>
+              )
+        
+          }
         </div>
       </div>
     </section>

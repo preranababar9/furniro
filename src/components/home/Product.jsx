@@ -7,18 +7,18 @@ import { getAllProducts } from "../../../services/products";
 import { useNavigate } from "react-router-dom";
 
 const Product = () => {
-
-  const router = useNavigate();
-  const redirect = () => {
-    router("/productdetail");
-  };
   const [data, setData] = useState([]);
 
   const fetchProduct = async () => {
     try {
       const response = await getAllProducts();
+     // Check if the response is an array before setting the state
+     if (Array.isArray(response)) {
       setData(response);
-      console.log(response);
+    } else {
+      console.error("Expected an array, but got:", response);
+      setData([]); // Default to an empty array if the data format is unexpected
+    }
     } catch (error) {
       console.log(error);
       return error;
@@ -26,12 +26,17 @@ const Product = () => {
   };
 
   useEffect(() => {
-    console.log("hello");
+    console.log("product data fetched");
 
     fetchProduct();
-  });
+  }, []);
 
-  console.log(data);
+  const router = useNavigate();
+  const redirect = () => {
+    router("/productdetail");
+  };
+
+  // console.log(data);
 
   return (
     <section className="py-20">
@@ -40,10 +45,13 @@ const Product = () => {
           <h2 className="font-black font-bold text-3xl ">Our Products</h2>
         </div>
 
-        <div  onClick={redirect}
-        className="flex  flex-wrap justify-evenly  gap-y-4">
+        <div className="flex  flex-wrap justify-evenly  gap-y-4">
           {data.map((item, index) => (
-            <div key={index} className="flex flex-col   relative items-center">
+            <div
+              onClick={redirect}
+              key={index}
+              className="flex flex-col   relative items-center"
+            >
               <img
                 src={item.imageUrl}
                 alt=""

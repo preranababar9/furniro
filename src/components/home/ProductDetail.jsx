@@ -7,7 +7,7 @@ const ProductDetail = () => {
   return (
     <section className="py-20 ">
       <div className="max-width">
-        <div key={index} className="flex max-md:flex-col gap-y-5 ">
+        <div  className="flex max-md:flex-col gap-y-5 ">
           {/* images */}
           <div className="lg:w-1/2">
             <div className="h-full lg:w-4/5 lg:py-16  py-10 px-2 bg-pink">
@@ -22,7 +22,7 @@ const ProductDetail = () => {
             <h2 className="text-5xl font-regular pb-4">ashcgashc</h2>
             <p className="text-xl  font-medium pb-4">scbv cnx</p>
             <p className="text-xl  text-offgrey pb-4">sbcvNBX</p>
-            <p className="text-lg font-medium lg:w-3/4 pb-6">{item.des}</p>
+            <p className="text-lg font-medium lg:w-3/4 pb-6">dnc nx</p>
 
             <p className="text-lg tracking-wide pb-4 text-offgrey ">Size</p>
             <div className="flex gap-5 pb-6">
