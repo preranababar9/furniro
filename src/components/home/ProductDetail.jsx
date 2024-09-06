@@ -32,12 +32,12 @@ const ProductDetail = () => {
   return (
     <section className="py-20 ">
       <div className="max-width">
-        <div className="flex max-md:flex-col gap-y-5 gap-5 ">
+        <div className="flex max-md:flex-col gap-y-5 gap-10  ">
           {/* images */}
 
           <div className="lg:w-1/2">
            
-              <img src={detail.imageUrl} alt="" className="h-3/4 w-full max-md:h-1/3 " />
+              <img src={detail.imageUrl} alt="" className="h-3/4 w-full object-cover max-md:h-1/3 " />
            
           </div>
 
@@ -48,7 +48,7 @@ const ProductDetail = () => {
             <h2 className="text-4xl font-regular pb-2">{detail.title}</h2>
             <p className="text-xl  font-medium pb-2">{detail.shortdesc}</p>
             <p className="text-xl  text-offgrey pb-4">{detail.price}</p>
-            <p className="text-lg font-medium lg:w-3/4 pb-4">{detail.des}</p>
+            <p className="text-lg max-md:text-md font-medium lg:w-3/4 pb-4">{detail.des}</p>
 
 <div className="flex gap-5">
             <p className="text-lg tracking-wide pb-4 text-offgrey ">Size :</p>
