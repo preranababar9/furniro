@@ -42,7 +42,7 @@ const Product = () => {
     <section className="py-20">
       <div className="max-width">
         <div className="text-center pb-16">
-          <h2 className="font-black font-bold text-3xl ">Our Products</h2>
+          <h2 className="font-black font-bold text-3xl ">Our Products </h2>
         </div>
 
         <div className="flex  flex-wrap justify-evenly  gap-y-4">
