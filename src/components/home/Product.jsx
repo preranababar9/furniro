@@ -29,6 +29,8 @@ const Product = () => {
     console.log("product data fetched");
 
     fetchProduct();
+     // Scroll to top when component mounts
+     window.scrollTo(0, 0);
   }, []);
 
   const router = useNavigate();

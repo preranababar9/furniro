@@ -22,6 +22,7 @@ const ProductDetail = () => {
     console.log("product detail fetched");
 
     fetchDetail();
+    window.scrollTo(0, 0);
   }, []);
 
   // Show loading state until detail is fetched
