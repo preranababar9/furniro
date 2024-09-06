@@ -11,7 +11,7 @@ const ProductDetailpage = () => {
         <Header/>
         <ProductDetail/>
         <Card/>
-        <Product/>
+        {/* <Product/> */}
         <Footer/>
     </div>
   )
