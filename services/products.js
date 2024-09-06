@@ -20,3 +20,13 @@ export const AddProduct = async (data) => {
     return error;
   }
 };
+
+export const getProductsById = async (id) => {
+  try {
+    const response = await db.collection("products").doc(id).get(); //for fetching product by id for product detail page 
+    const data =  response.data();
+    return data;
+  } catch (error) {
+    return error;
+  }
+};

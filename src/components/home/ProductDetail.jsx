@@ -2,16 +2,49 @@ import React, { useEffect, useState } from "react";
 import sofa from "/images/sofa.svg";
 import { FaMinus } from "react-icons/fa6";
 import { MdAdd } from "react-icons/md";
+import { getProductsById } from "../../../services/products";
+import { useParams } from "react-router-dom";
 
 const ProductDetail = () => {
+
+  const { id } = useParams(); // Extract the product ID from the URL
+const[detail, setDetail] =useState(null);
+
+const fetchDetail =  async () => {
+  try {
+    const response = await getProductsById(id);
+    setDetail(response);
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+}
+useEffect(() => {
+  console.log("product detail fetched");
+  
+  fetchDetail();
+}, []);
+
+// Show loading state until detail is fetched
+if (!detail) {
+  return <div>Loading...</div>;
+}
+
+
   return (
     <section className="py-20 ">
       <div className="max-width">
+     
         <div  className="flex max-md:flex-col gap-y-5 ">
           {/* images */}
+
+       
+
+
+   
           <div className="lg:w-1/2">
             <div className="h-full lg:w-4/5 lg:py-16  py-10 px-2 bg-pink">
-              <img src={sofa} alt="" className="h-full" />
+              <img src={detail.imageUrl} alt="" className="h-full" />
             </div>
           </div>
 
@@ -19,10 +52,10 @@ const ProductDetail = () => {
 
           <div className="lg:w-1/2">
             {}
-            <h2 className="text-5xl font-regular pb-4">ashcgashc</h2>
-            <p className="text-xl  font-medium pb-4">scbv cnx</p>
-            <p className="text-xl  text-offgrey pb-4">sbcvNBX</p>
-            <p className="text-lg font-medium lg:w-3/4 pb-6">dnc nx</p>
+            <h2 className="text-5xl font-regular pb-4">{detail.title}</h2>
+            <p className="text-xl  font-medium pb-4">{detail.shortdesc}</p>
+            <p className="text-xl  text-offgrey pb-4">{detail.price}</p>
+            <p className="text-lg font-medium lg:w-3/4 pb-6">{detail.des}</p>
 
             <p className="text-lg tracking-wide pb-4 text-offgrey ">Size</p>
             <div className="flex gap-5 pb-6">
@@ -66,8 +99,17 @@ const ProductDetail = () => {
                 </button>
               </div>
             </div>
+    
           </div>
+          
+
+
+
+            
         </div>
+  
+
+
       </div>
     </section>
   );

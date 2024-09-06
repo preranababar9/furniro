@@ -32,8 +32,8 @@ const Product = () => {
   }, []);
 
   const router = useNavigate();
-  const redirect = () => {
-    router("/productdetail");
+  const redirect = (id) => {
+    router(`/product/${id}`);
   };
 
   // console.log(data);
@@ -48,7 +48,7 @@ const Product = () => {
         <div className="flex  flex-wrap justify-evenly  gap-y-4">
           {data.map((item, index) => (
             <div
-              onClick={redirect}
+            onClick={() =>redirect(item.id)}
               key={index}
               className="flex flex-col   relative items-center"
             >
