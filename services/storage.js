@@ -18,3 +18,6 @@ const firebaseConfig = {
 // Initialize Cloud Firestore and get a reference to the service
 export const db = firebase.firestore();
 export const storage = firebase.storage()
+
+
+// utilis folder --> file.js file ---> storage function
