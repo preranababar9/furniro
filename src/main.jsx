@@ -3,6 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
+import { CartProvider } from './context/CartC.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -83,7 +84,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+      <CartProvider>
      <RouterProvider router={router} />
      <ToastContainer/>
+     </CartProvider>
   </StrictMode>,
 )

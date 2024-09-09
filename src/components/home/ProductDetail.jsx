@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-import sofa from "/images/sofa.svg";
-import { FaMinus } from "react-icons/fa6";
-import { MdAdd } from "react-icons/md";
 import { getProductsById } from "../../../services/products";
 import { useParams } from "react-router-dom";
+import { IoAddOutline } from "react-icons/io5";
+import { LuMinus } from "react-icons/lu";
 
-const ProductDetail = () => {
+import { useContext } from "react";
+import { CartContext } from "../../context/CartC";
+
+const ProductDetail = ({ product }) => {
   const { id } = useParams(); // Extract the product ID from the URL
   const [detail, setDetail] = useState(null);
+
+  const { cartItems, addToCart, getCartTotal } = useContext(CartContext);
 
   const fetchDetail = async () => {
     try {
@@ -37,9 +41,11 @@ const ProductDetail = () => {
           {/* images */}
 
           <div className="lg:w-1/2">
-           
-              <img src={detail.imageUrl} alt="" className="h-3/4 w-full object-cover max-md:h-1/3 " />
-           
+            <img
+              src={detail.imageUrl}
+              alt=""
+              className="h-3/4 w-full object-cover max-md:h-1/3 "
+            />
           </div>
 
           {/* descpritions */}
@@ -49,48 +55,50 @@ const ProductDetail = () => {
             <h2 className="text-4xl font-regular pb-2">{detail.title}</h2>
             <p className="text-xl  font-medium pb-2">{detail.shortdesc}</p>
             <p className="text-xl  text-offgrey pb-4">{detail.price}</p>
-            <p className="text-lg max-md:text-md font-medium lg:w-3/4 pb-4">{detail.des}</p>
+            <p className="text-lg max-md:text-md font-medium lg:w-3/4 pb-4">
+              {detail.des}
+            </p>
 
-<div className="flex gap-5">
-            <p className="text-lg tracking-wide pb-4 text-offgrey ">Size :</p>
-            <div className="flex gap-5 pb-6">
-              <button className="hover:bg-brown bg-peach rounded-lg text-black h-8 w-8  hover:text-white">
-                L
-              </button>
-              <button className="hover:bg-brown bg-peach rounded-lg text-black h-8 w-8  hover:text-white">
-                XL
-              </button>
-              <button className="hover:bg-brown bg-peach rounded-lg text-black h-8 w-8  hover:text-white">
-                XS
-              </button>
-            </div></div>
-
-<div className="flex gap-5">
-            <p className="text-lg tracking-wide pb-4 text-offgrey">Color :</p>
-            <div className="flex gap-5 pb-10">
-              <button className="rounded-full bg-brown h-8 w-8 text-brown"></button>
-              <button className="rounded-full bg-blue-300 h-8 w-8 text-brown"></button>
-              <button className="rounded-full bg-black h-8 w-8 text-brown"></button>
-            </div></div>
-
-            <div className="flex flex-wrap gap-10 items-center">
-              <div className="flex items-center gap-6 border-2 border-solid border-offgrey rounded-lg lg:w-1/4  w-1/2 py-3 max-md:px-10  justify-center">
-                {/* quantity */}
-                <button className="   ">
-                  <FaMinus size={16} />
+            <div className="flex gap-5">
+              <p className="text-lg tracking-wide pb-4 text-offgrey ">Size :</p>
+              <div className="flex gap-5 pb-6">
+                <button className="hover:bg-brown bg-peach rounded-lg text-black h-8 w-8  hover:text-white">
+                  L
                 </button>
-                <input
-                  type="number"
-                  placeholder="1"
-                  className="lg:w-1/4 w-full pl-4 text-lg"
-                />
-                <button className="   ">
-                  <MdAdd size={20} />
+                <button className="hover:bg-brown bg-peach rounded-lg text-black h-8 w-8  hover:text-white">
+                  XL
+                </button>
+                <button className="hover:bg-brown bg-peach rounded-lg text-black h-8 w-8  hover:text-white">
+                  XS
+                </button>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <p className="text-lg tracking-wide pb-2 text-offgrey">Color :</p>
+              <div className="flex gap-5 pb-5">
+                <button className="rounded-full bg-brown h-8 w-8 text-brown"></button>
+                <button className="rounded-full bg-blue-300 h-8 w-8 text-brown"></button>
+                <button className="rounded-full bg-black h-8 w-8 text-brown"></button>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-5 items-center">
+              <div className="flex items-center border-solid border-black border-2 rounded-lg lg:px-3 lg:py-1 lg:gap-3">
+                <button className="px-4 py-2  text-black  font-bold uppercase rounded focus:outline-none ">
+                  <IoAddOutline size={24} />
+                </button>
+                <p className="text-xl font-semibold">1</p>
+                <button className="px-4 py-2  text-black  font-bold uppercase rounded focus:outline-none ">
+                  <LuMinus size={24} />
                 </button>
               </div>
 
               <div>
-                <button className="border-2 border-solid border-black lg:text-lg rounded-lg w-full lg:px-10 px-2 py-3">
+                <button
+                  onClick={() => addToCart(detail)}
+                  className="border-2 border-solid border-black lg:text-lg rounded-lg w-full lg:px-10 px-2 py-3"
+                >
                   Add to Cart
                 </button>
               </div>
