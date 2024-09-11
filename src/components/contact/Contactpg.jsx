@@ -58,7 +58,7 @@ const Contactpg = () => {
               <label>Your name</label>
               <input
                 type="text"
-                placeholder="abc"
+                placeholder="Enter Your Name"
                 className="border-2 border-solid border-offgrey rounded-lg py-3 w-full pl-2"
               />
             </div>
@@ -67,7 +67,7 @@ const Contactpg = () => {
               <label>Email Address</label>
               <input
                 type="email"
-                placeholder="abc@gmail.com"
+                placeholder="Enter Email Address"
                 className="border-2 border-solid border-offgrey rounded-lg py-3 w-full pl-2"
               />
             </div>
@@ -77,7 +77,7 @@ const Contactpg = () => {
               <input
                rows="4"
                 type="text"
-                placeholder="Optional"
+                placeholder="Your Subject"
                 className="border-2 border-solid border-offgrey rounded-lg py-3 pl-2"
               />
             </div>
@@ -92,7 +92,7 @@ const Contactpg = () => {
               />
             </div>
 
-            <button className="bg-[#B88E2F] text-white px-16 py-3">Submit</button>
+            <button className="bg-[#B88E2F] text-lg rounded-md text-white px-16 py-3">Submit</button>
           </div>
         </div>
       </div>
