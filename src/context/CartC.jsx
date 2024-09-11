@@ -3,6 +3,8 @@ import { toast } from "react-toastify";
 
 export const CartContext = createContext();
 
+
+//It holds the logic for the cart and makes it available to any part of the app that needs it. It wraps around your app or components so they can access the cart data.
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(
     localStorage.getItem("cartItems")
