@@ -60,19 +60,22 @@ export const CartProvider = ({ children }) => {
       (total, item) => total + item.price * item.quantity,
       0
     );
+   
+    
   };
+ 
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // useEffect(() => {
-  //   const cartItems = localStorage.getItem("cartItems");
-  //   if (cartItems) {
-  //     setCartItems(JSON.parse(cartItems));
-  //   }
-  // }, []);
-  console.log("hello");
+  useEffect(() => {
+    const cartItems = localStorage.getItem("cartItems");
+    if (cartItems) {
+      setCartItems(JSON.parse(cartItems));
+    }
+  }, []);
+
   return (
     <CartContext.Provider
       value={{
