@@ -39,7 +39,7 @@ const Cart = () => {
                       {item.title}
                     </h1>
                     <p className="text-gray-600 lg:text-xl text-md">
-                      {item.price}
+                    Rs {(new Intl.NumberFormat().format(item.price))}
                     </p>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ const Cart = () => {
           </div>
           {cartItems.length > 0 ? (
             <div className="flex flex-col mt-20 ">
-              <h1 className="text-2xl font-bold">Total: Rs {getCartTotal()}</h1>
+              <h1 className="text-2xl font-bold">Total : Rs {(new Intl.NumberFormat().format(getCartTotal()))}</h1>
               <button
                 className="px-4 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
                 onClick={() => {

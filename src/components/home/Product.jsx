@@ -65,7 +65,7 @@ const Product = () => {
                   {item.title}
                 </h3>
                 <p className="text-grey text-md pb-1">{item.shortdesc}</p>
-                <p className="">{item.price}</p>
+                <p className="">Rs {(new Intl.NumberFormat().format(item.price))}</p>
               </div>
             </div>
           ))}

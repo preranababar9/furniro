@@ -54,7 +54,7 @@ const ProductDetail = ({ product }) => {
             {}
             <h2 className="text-4xl font-regular pb-2">{detail.title}</h2>
             <p className="text-xl  font-medium pb-2">{detail.shortdesc}</p>
-            <p className="text-xl  text-offgrey pb-4">{detail.price}</p>
+            <p className="text-xl  text-offgrey pb-4">Rs {(new Intl.NumberFormat().format(detail.price))}</p>
             <p className="text-lg max-md:text-md font-medium lg:w-3/4 pb-4">
               {detail.des}
             </p>
