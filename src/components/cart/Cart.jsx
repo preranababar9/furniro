@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartC";
 import { IoAddOutline } from "react-icons/io5";
 import { LuMinus } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } =
@@ -83,6 +84,9 @@ const Cart = () => {
             </h1>
           )}
         </div>
+
+<div className="flex items-center justify-center mt-10">
+        <Link to="/checkout" className="border-solid border-black border-2 font-semibold text-center px-8 py-4 text-xl rounded-full mt-10">Checkout</Link></div>
       </div>
     </section>
   );
