@@ -11,6 +11,8 @@ const ProductDetail = ({ product }) => {
   const { id } = useParams(); // Extract the product ID from the URL
   const [detail, setDetail] = useState(null);
 
+  const [count , setCount] = useState(1);
+
   const router = useNavigate();
   const { cartItems, addToCart, getCartTotal } = useContext(CartContext);
 
@@ -90,11 +92,18 @@ const ProductDetail = ({ product }) => {
 
             <div className="flex flex-wrap gap-5 items-center">
               <div className="flex items-center border-solid border-black border-2 rounded-lg lg:px-3 lg:py-1 lg:gap-3">
-                <button className="px-4 py-2  text-black  font-bold uppercase rounded focus:outline-none ">
-                  <IoAddOutline size={24} />
+                <button
+                   onClick={() => setCount((prev) => prev + 1 )}
+                  
+                 className="px-4 py-2  text-black  font-bold uppercase rounded focus:outline-none ">
+                  <IoAddOutline size={24} 
+                />
+                
                 </button>
-                <p className="text-xl font-semibold">1</p>
-                <button className="px-4 py-2  text-black  font-bold uppercase rounded focus:outline-none ">
+                <p className="text-xl font-semibold">{count}</p>
+                <button 
+                 onClick={() => setCount((prev) => prev>=2? prev-1 : prev)}
+                className="px-4 py-2  text-black  font-bold uppercase rounded focus:outline-none ">
                   <LuMinus size={24} />
                 </button>
               </div>

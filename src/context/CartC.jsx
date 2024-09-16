@@ -67,9 +67,6 @@ export const CartProvider = ({ children }) => {
     );
    };
    
-  
- 
-
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);

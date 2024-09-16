@@ -90,7 +90,7 @@ const Cart = () => {
           )}
         </div>
 
-        <div className="flex items-center justify-center mt-10">
+        <div className="flex items-center justify-center mt-2">
           <Link
             to="/checkout"
             className="border-solid border-black border-2 font-semibold text-center px-8 py-4 text-xl rounded-full mt-10"
