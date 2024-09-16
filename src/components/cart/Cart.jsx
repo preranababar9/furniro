@@ -30,17 +30,20 @@ const Cart = () => {
                 className="flex max-md:flex-col  justify-between  gap-2 lg:gap-20 items-center"
               >
                 <div className="flex  lg:gap-14  gap-4  items-center">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className="rounded-md lg:h-[180px] h-[100px] lg:w-[300px] w-3/4"
-                  />
+                  <Link to= {`/product/${item.id}`}>
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className="rounded-md lg:h-[180px] h-[100px] lg:w-[300px] w-3/4"
+                    />
+                  </Link>
                   <div className="flex flex-col w-full">
+                  <Link to= {`/product/${item.id}`}>
                     <h1 className="lg:text-2xl text-lg font-bold">
                       {item.title}
-                    </h1>
+                    </h1></Link>
                     <p className="text-gray-600 lg:text-xl text-md">
-                    Rs {(new Intl.NumberFormat().format(item.price))}
+                      Rs {new Intl.NumberFormat().format(item.price)}
                     </p>
                   </div>
                 </div>
@@ -68,7 +71,9 @@ const Cart = () => {
           </div>
           {cartItems.length > 0 ? (
             <div className="flex flex-col mt-20 ">
-              <h1 className="text-2xl font-bold">Total : Rs {(new Intl.NumberFormat().format(getCartTotal()))}</h1>
+              <h1 className="text-2xl font-bold">
+                Total : Rs {new Intl.NumberFormat().format(getCartTotal())}
+              </h1>
               <button
                 className="px-4 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
                 onClick={() => {
@@ -85,8 +90,14 @@ const Cart = () => {
           )}
         </div>
 
-<div className="flex items-center justify-center mt-10">
-        <Link to="/checkout" className="border-solid border-black border-2 font-semibold text-center px-8 py-4 text-xl rounded-full mt-10">Checkout</Link></div>
+        <div className="flex items-center justify-center mt-10">
+          <Link
+            to="/checkout"
+            className="border-solid border-black border-2 font-semibold text-center px-8 py-4 text-xl rounded-full mt-10"
+          >
+            Checkout
+          </Link>
+        </div>
       </div>
     </section>
   );

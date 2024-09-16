@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from "react";
-import product1 from "/images/product1.svg";
-import share from "/icons/share.svg";
-import compare from "/icons/compare.svg";
-import heart from "/icons/heart.svg";
 import { getAllProducts } from "../../../services/products";
 import { useNavigate } from "react-router-dom";
 

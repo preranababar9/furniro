@@ -3,7 +3,7 @@ import { getProductsById } from "../../../services/products";
 import { useParams } from "react-router-dom";
 import { IoAddOutline } from "react-icons/io5";
 import { LuMinus } from "react-icons/lu";
-
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartC";
 
@@ -11,6 +11,7 @@ const ProductDetail = ({ product }) => {
   const { id } = useParams(); // Extract the product ID from the URL
   const [detail, setDetail] = useState(null);
 
+  const router = useNavigate();
   const { cartItems, addToCart, getCartTotal } = useContext(CartContext);
 
   const fetchDetail = async () => {
@@ -34,6 +35,8 @@ const ProductDetail = ({ product }) => {
     return <div>Loading...</div>;
   }
 
+ 
+
   return (
     <section className="py-20 ">
       <div className="max-width">
@@ -54,7 +57,9 @@ const ProductDetail = ({ product }) => {
             {}
             <h2 className="text-4xl font-regular pb-2">{detail.title}</h2>
             <p className="text-xl  font-medium pb-2">{detail.shortdesc}</p>
-            <p className="text-xl  text-offgrey pb-4">Rs {(new Intl.NumberFormat().format(detail.price))}</p>
+            <p className="text-xl  text-offgrey pb-4">
+              Rs {new Intl.NumberFormat().format(detail.price)}
+            </p>
             <p className="text-lg max-md:text-md font-medium lg:w-3/4 pb-4">
               {detail.des}
             </p>
@@ -96,7 +101,9 @@ const ProductDetail = ({ product }) => {
 
               <div>
                 <button
-                  onClick={() => addToCart(detail)}
+                  onClick={() => {
+                    addToCart(detail); router("/cart")
+                  }}
                   className="border-2 border-solid border-black lg:text-lg rounded-lg w-full lg:px-10 px-2 py-3"
                 >
                   Add to Cart

@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { toast } from "react-toastify";
+
 
 export const CartContext = createContext();
 
@@ -19,9 +19,8 @@ export const CartProvider = ({ children }) => {
       console.error("Item or Item ID is undefined");
       return;
     } else {
-      toast.success("Product added to Cart Successfully!", {
-        position: "top-center",
-      });
+      console.log("item added to cart");
+      
     }
 
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);//checks wheather the item is already in the cart or not 

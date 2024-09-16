@@ -1,6 +1,10 @@
 import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartC";
 
 const Checkout = () => {
+  const { cartItems, getCartTotal } = useContext(CartContext);
+
   return (
     <section className="py-20">
       <div className="max-width">
@@ -110,30 +114,37 @@ const Checkout = () => {
             </form>
           </div>
 
-
-
           <div className="mt-10 w-1/2">
-                <div className="flex flex-col gap-y-2">
-                        <div className="flex justify-evenly  pb-5">
-                                <p className="text-xl font-bold">Product</p>
-                                <p className="text-xl font-bold">Subtotal</p>
-                        </div>
-
-                        <div className="flex justify-evenly pb-5">
-                                <p className="text-lg text-offgrey">Product name</p>
-                                <p className="text-lg ">price</p>
-                        </div>
-
-                        <div className="flex justify-evenly pb-5">
-                                <p className="text-lg ">Subtotal</p>
-                                <p className="text-lg ">price</p>
-                        </div>
-
-                        <div className="flex justify-evenly pb-5">
-                                <p className="text-lg ">Total</p>
-                                <p className="text-2xl text-brown font-bold ">price</p>
-                        </div>
+            <div className="flex flex-col gap-y-2">
+              <div className="flex justify-evenly  pb-5">
+                <p className="text-xl font-bold">Product</p>
+                <p className="text-xl font-bold">Subtotal</p>
+              </div>
+              {cartItems.map((item, index) => (
+                <div key={index} className="flex  justify-evenly pb-2">
+                  <p className="text-lg  text-offgrey">
+                    {item.title} X {item.quantity}
+                  </p>
+                  <p className="text-lg  ">
+                    {" "}
+                    Rs {new Intl.NumberFormat().format(item.price)}{" "}
+                  </p>
                 </div>
+              ))}
+
+              {/* <div className="flex justify-evenly pb-5">
+                             <p className="text-lg ">Subtotal</p>
+                             <p className="text-lg ">price</p>
+                     </div> */}
+
+              <div className="flex justify-evenly pb-5">
+                <p className="text-lg ">Total</p>
+                <p className="text-2xl text-brown font-bold ">
+                  {" "}
+                  Rs {new Intl.NumberFormat().format(getCartTotal())}
+                </p>
+              </div>
+            </div>
           </div>
 
           <div></div>
