@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartC";
 
+
 const ProductDetail = ({ product }) => {
   const { id } = useParams(); // Extract the product ID from the URL
   const [detail, setDetail] = useState(null);
@@ -14,7 +15,7 @@ const ProductDetail = ({ product }) => {
   const [count , setCount] = useState(1);
 
   const router = useNavigate();
-  const { cartItems, addToCart, getCartTotal } = useContext(CartContext);
+  const { cartItems,   addMultiple } = useContext(CartContext);
 
   const fetchDetail = async () => {
     try {
@@ -111,7 +112,7 @@ const ProductDetail = ({ product }) => {
               <div>
                 <button
                   onClick={() => {
-                    addToCart(detail); router("/cart")
+                    addMultiple(detail, count); router("/cart"); 
                   }}
                   className="border-2 border-solid border-black lg:text-lg rounded-lg w-full lg:px-10 px-2 py-3"
                 >

@@ -85,19 +85,19 @@ const Cart = () => {
             </div>
           ) : (
             <h1 className="text-2xl text-center font-bold">
-              Your cart is empty
+              {/* Your cart is empty */}
             </h1>
           )}
         </div>
 
-        <div className="flex items-center justify-center mt-2">
+      { cartItems.length > 0 &&  <div className="flex items-center justify-center mt-2">
           <Link
             to="/checkout"
             className="border-solid border-black border-2 font-semibold text-center px-8 py-4 text-xl rounded-full mt-10"
           >
             Checkout
           </Link>
-        </div>
+        </div>}
       </div>
     </section>
   );

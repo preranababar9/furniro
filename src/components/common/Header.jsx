@@ -7,10 +7,14 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoIosSearch } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineAccountCircle } from "react-icons/md";
+import { CartContext } from "../../context/CartC";
+import { useContext } from "react";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [toggle, setToggle] = useState(false);
+
+  const { cartItems,   addMultiple } = useContext(CartContext);
 
   useEffect(() => {
     if (toggle) {
@@ -113,6 +117,8 @@ const Header = () => {
           <Link to="/cart">
             {" "}
             <FaCartShopping size={24} />
+
+            <span className="bg-yellow-100">{cartItems.length}</span>
           </Link>
         </div>
       </div>

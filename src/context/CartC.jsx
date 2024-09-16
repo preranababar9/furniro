@@ -55,6 +55,38 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  const addMultiple = (item, quantity) => {
+try {
+  if (!item || !item.id) {
+    console.error("Item or Item ID is undefined");
+    return;
+  } else {
+    console.log("item added to cart");
+    
+  }
+
+  const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);//checks wheather the item is already in the cart or not 
+
+  //if item is already in cart and again we try to add it in cart then it increase the quantity of that item in cart 
+  if (isItemInCart) {
+    setCartItems(
+      cartItems.map((cartItem) =>
+        cartItem.id === item.id
+          ? { ...cartItem, quantity: cartItem.quantity + quantity }
+          : cartItem
+      )
+    );
+  } else {
+    setCartItems([...cartItems, { ...item, quantity: quantity }]);//and if not then it adds item to cart 
+  }
+
+} catch (error) {
+  console.log(error);
+  
+}
+  };
+
+
   const clearCart = () => {
     setCartItems([]);
   };
@@ -83,6 +115,7 @@ export const CartProvider = ({ children }) => {
       value={{
         cartItems,
         addToCart,
+        addMultiple,
         removeFromCart,
         clearCart,
         getCartTotal,
