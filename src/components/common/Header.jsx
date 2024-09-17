@@ -87,11 +87,11 @@ const Header = () => {
                   <Link to="/about">About</Link>
                 </li>
                 <li className="hover:underline hover:underline-offset-4 hover:scale-105">
-                  <Link to="">Wishlist</Link>
-                </li>
-                <li className="hover:underline hover:underline-offset-4 hover:scale-105">
                   <Link to="/cart">Cart</Link>
                 </li>
+                {/* <li className="hover:underline hover:underline-offset-4 hover:scale-105">
+                  <Link to="">Wishlist</Link>
+                </li> */}
                 <li className="hover:underline hover:underline-offset-4 hover:scale-105">
                   <Link to="/contact">Contact</Link>
                 </li>
