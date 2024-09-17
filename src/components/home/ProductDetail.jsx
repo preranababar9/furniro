@@ -35,7 +35,7 @@ const ProductDetail = ({ product }) => {
 
   // Show loading state until detail is fetched
   if (!detail) {
-    return <div>Loading...</div>;
+    return <div className="text-center text-lg">Loading...</div>;
   }
 
  
