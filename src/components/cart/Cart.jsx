@@ -34,7 +34,7 @@ const Cart = () => {
                     <img
                       src={item.imageUrl}
                       alt={item.title}
-                      className="rounded-md lg:h-[180px] h-[180px] lg:w-[300px] w-3/4"
+                      className="rounded-md lg:h-[180px] h-[100px] lg:w-[300px] w-full"
                     />
                   </Link>
                   <div className="flex flex-col w-full">

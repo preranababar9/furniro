@@ -114,7 +114,7 @@ const ProductDetail = ({ product }) => {
                   onClick={() => {
                     addMultiple(detail, count); router("/cart"); 
                   }}
-                  className="border-2 border-solid border-black lg:text-lg rounded-lg w-full lg:px-10 px-2 py-3"
+                  className="border-2 border-solid border-black lg:text-lg font-semibold text-lg  rounded-lg w-full lg:px-10 px-4 py-2"
                 >
                   Add to Cart
                 </button>
