@@ -21,6 +21,7 @@ import ProductDetailform from "./components/adminform/ProductDetailform.jsx";
 import ProductDetailpage from "./pages/ProductDetailpage.jsx";
 import Aboutpage from "./pages/Aboutpage.jsx";
 import Checkoutpage from "./pages/Checkoutpage.jsx";
+import Order from "./pages/Order.jsx";
 
 
 const router = createBrowserRouter([
@@ -63,6 +64,12 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Userloginpage/>,
+  },
+  {
+    
+      path: "order",
+      element: <Order/>,
+   
   },
   {
     path: "admin",
