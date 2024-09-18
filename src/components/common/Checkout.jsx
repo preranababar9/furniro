@@ -110,13 +110,13 @@ const Checkout = () => {
           </div>
 
           <div className="mt-10  lg:w-2/5  mx-auto overflow-auto ">
-            <table class="table-auto lg:w-3/4  text-left ">
+            <table class="table-auto lg:w-3/4  text-start">
               <thead>
                 <tr>
-                  <th class="px-2  py-3 text-gray-900 lg:text-2xl text-xl   ">
+                  <th class="px-2  py-3 text-gray-900 lg:text-2xl text-xl text-start pl-5 ">
                     Product
                   </th>
-                  <th class="px-2   py-3 text-gray-900 lg:text-2xl  text-xl   ">
+                  <th class="px-2   py-3 text-gray-900 lg:text-2xl  text-xl text-start pl-5 ">
                     Subtotal
                   </th>
                 </tr>
