@@ -116,7 +116,7 @@ const Header = () => {
 
           <Link to="/cart">
             {" "}
-            <span className="bg-brown text-white absolute top-3 lg:right-20  right-5 rounded-full  px-2">{cartItems.length}</span>
+            <span className="bg-brown text-white absolute font-semibold top-3 lg:right-[85px]  right-5 rounded-full  px-2">{cartItems.length}</span>
             <FaCartShopping size={24} className="relative"/>
 
            
