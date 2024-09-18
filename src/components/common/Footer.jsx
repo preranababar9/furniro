@@ -21,13 +21,13 @@ const Footer = () => {
             <p className="text-lg text-offgrey font-normal ">Links</p>
             <ul className=" flex flex-col max-md:flex-col lg:gap-10 gap-4 font-semibold text-[#000000] text-xl ">
               <li>
-                <Link to="/home">Home</Link>
+                <Link  to="/home">Home</Link>
               </li>
               <li>
                 <Link to="/shop">Shop</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link  to="/about">About</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
