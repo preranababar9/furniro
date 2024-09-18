@@ -23,19 +23,19 @@ const Cart = () => {
         <h1 className="text-4xl font-bold max-md:text-2xl text-center mb-10">
           Your Shopping Cart
         </h1>
-        <div className=" flex w-full max-md:flex-col  items-center lg:justify-around  bg-white gap-8  text-black text-sm">
+        <div className=" flex w-full max-md:flex-col  items-start lg:justify-around  bg-white gap-8  text-black text-sm">
           <div className=" flex flex-col justify-start gap-5">
             {cartItems.map((item, index) => (
               <div
                 key={index}
                 className="flex max-md:flex-col  justify-between  lg:gap-20 items-center"
               >
-                <div className="flex  lg:gap-14  gap-4 items-center">
+                <div className="flex  lg:gap-14 mb-2 gap-4 items-center">
                   <Link to= {`/product/${item.id}`}>
                     <img
                       src={item.imageUrl}
                       alt={item.title}
-                      className="rounded-md lg:h-[180px] h-[100px] lg:w-[300px] w-full"
+                      className="rounded-md lg:h-[180px] h-[80px] lg:w-[280px] w-[200px]"
                     />
                   </Link>
                   <div className="flex flex-col w-full">
@@ -48,7 +48,7 @@ const Cart = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center border-solid border-grey border-2 rounded-full lg:px-2 lg:py-1 lg:gap-3">
+                <div className="flex items-center border-solid border-grey border-2 rounded-full  lg:px-2 lg:py-1 lg:gap-3">
                   <button
                     className="px-4 py-2  text-black  font-bold uppercase rounded focus:outline-none "
                     onClick={() => {
@@ -59,7 +59,7 @@ const Cart = () => {
                   </button>
                   <p className="text-xl font-semibold">{item.quantity}</p>
                   <button
-                    className="px-4 py-2  text-black  font-bold uppercase rounded focus:outline-none "
+                    className="px-4 lg:py-2 py-1     text-black  font-bold uppercase rounded focus:outline-none "
                     onClick={() => {
                       removeFromCart(item);
                     }}
