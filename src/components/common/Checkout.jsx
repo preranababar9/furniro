@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartC";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const { cartItems, getCartTotal } = useContext(CartContext);
@@ -10,7 +11,7 @@ const Checkout = () => {
       <div className="max-width">
         <div className=" flex max-md:flex-col w-full gap-20  max-md:items-center  ">
           <div className=" flex flex-col w-1/2 items-center">
-            <h3 className="text-center text-3xl font-bold mb-5">
+            <h3 className="text-center lg:text-3xl text-2xl font-bold mb-5">
               Billing Details
             </h3>
             <form className="">
@@ -144,10 +145,16 @@ const Checkout = () => {
  </tbody>
 
             </table>
+
+            
+            <div className="text-center lg:mr-52 lg:text-2xl text-lg font-bold rounded-lg bg-brown py-4 text-white  mt-10">
+         <Link to="/order" >Confirm Order</Link>
+        </div>
           </div>
 
 
         </div>
+
       </div>
     </section>
   );

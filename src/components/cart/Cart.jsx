@@ -96,7 +96,7 @@ const Cart = () => {
             to="/checkout"
             className="border-solid border-black max-md:px-6 max-md:py-3 max-md:text-lg border-2 font-semibold text-center px-8 py-4 text-xl rounded-full mt-10"
           >
-            Checkout
+            Proceed to Buy
           </Link>
         </div>}
       </div>
