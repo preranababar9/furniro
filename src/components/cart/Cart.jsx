@@ -23,7 +23,7 @@ const Cart = () => {
         <h1 className="text-4xl font-bold max-md:text-2xl text-center mb-10">
           Your Shopping Cart
         </h1>
-        <div className=" flex w-full max-md:flex-col  items-start lg:justify-around  bg-white gap-8  text-black text-sm">
+        <div className=" flex w-full max-md:flex-col  items-center lg:justify-around  bg-white gap-8  text-black text-sm">
           <div className=" flex flex-col justify-start gap-5">
             {cartItems.map((item, index) => (
               <div
@@ -35,7 +35,7 @@ const Cart = () => {
                     <img
                       src={item.imageUrl}
                       alt={item.title}
-                      className="rounded-md lg:h-[180px] h-[80px] lg:w-[280px] w-[200px]"
+                      className="rounded-md lg:h-[180px] h-[80px] lg:w-[280px] w-[150px]"
                     />
                   </Link>
                   <div className="flex flex-col w-full">
