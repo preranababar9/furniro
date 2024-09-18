@@ -113,6 +113,7 @@ const ProductDetail = ({ product }) => {
                 <button
                   onClick={() => {
                     addMultiple(detail, count); router("/cart"); 
+                    window.scrollTo(0, 0);
                   }}
                   className="border-2 border-solid border-black lg:text-lg font-semibold text-lg  rounded-lg w-full lg:px-10 px-4 py-2"
                 >

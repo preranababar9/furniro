@@ -14,6 +14,7 @@ const Cart = () => {
   const router = useNavigate();
   const submit = () => {
     router("/checkout");
+    
   };
 
   return (
