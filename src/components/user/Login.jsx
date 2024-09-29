@@ -22,7 +22,7 @@ const Login = () => {
 
       // console.log(userinfo);
       if (isLogin) {
-        localStorage.setItem(data.email, data.password);
+        localStorage.setItem("email", data.email );
         toast.success("Login successfull!", {
           position: "top-center",
         });

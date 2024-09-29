@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import  { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import navlogo from "/logo/navlogo.svg";
 import { IoMenu } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 import { FaCartShopping } from "react-icons/fa6";
-import { IoIosSearch } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { CartContext } from "../../context/CartC";
 import { useContext } from "react";
+import { IoMdLogOut } from "react-icons/io";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const[user, setUser] = useState(false);
 
+  const router = useNavigate();
 
   const { cartItems,   addMultiple } = useContext(CartContext);
 
@@ -25,11 +27,16 @@ const Header = () => {
     }
   }, [toggle]);
 
+  useEffect(() => {
+    const user = localStorage.getItem("email");
+    setUser(user);
+  },[router])
+
   return (
     <div>
       <div className="flex justify-between   max-width  py-4 items-center ">
-        <Link to="/">
-        <img src={navlogo} alt="" className="max-md:h-20 z-30 max-md:w-1/2" /></Link>
+        <Link to="/" className="z-30">
+        <img src={navlogo} alt="" className="max-md:h-10  max-md:w-3/4" /></Link>
 
         <ul className="flex gap-14 max-md:gap-2 font-black font-normal text-xl max-md:hidden ">
           <li className="hover:underline hover:underline-offset-4 hover:scale-105">
@@ -101,16 +108,46 @@ const Header = () => {
               </ul>
             </div>
 
-            <button className="bg-black text-white font-semibold py-3 px-4 mt-4 rounded-lg">
+            {/* <button className="bg-black text-white font-semibold py-3 px-4 mt-4 rounded-lg">
+              <Link to="/register">SignUp / Login</Link>
+            </button> */}
+
+            {user ? (
+                <button 
+                onClick={() => {
+                  localStorage.removeItem("email");
+                  router("/")
+                }}
+                className="bg-black text-white font-semibold py-3 px-4 mt-4 rounded-lg">
+                <Link to="/" >Logout</Link>
+              </button>
+            ) : (
+              <button className="bg-black text-white font-semibold py-3 px-4 mt-4 rounded-lg">
               <Link to="/register">SignUp / Login</Link>
             </button>
+            )}
           </div>
         )}
 
         <div className="flex lg:gap-10 max-md:gap-4 max-md:hidden items-center">
-          <Link to="/register">
+          
+        {user ? (
+            <div
+            onClick={() => {
+              localStorage.removeItem("email");
+              router("/login");
+            }}
+            >
+              <IoMdLogOut size={28} />
+            </div>
+          ): (
+             <Link to="/register">
             <MdOutlineAccountCircle size={28} />
           </Link>
+          )}
+          {/* <Link to="/register">
+            <MdOutlineAccountCircle size={28} />
+          </Link> */}
           {/* <IoIosSearch size={28} /> */}
 
           <Link>
@@ -124,6 +161,7 @@ const Header = () => {
 
            
           </Link>
+
         </div>
       </div>
     </div>

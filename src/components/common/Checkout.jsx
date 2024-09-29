@@ -1,9 +1,19 @@
-import React from "react";
-import { useContext } from "react";
+
+import { useContext, useEffect } from "react";
 import { CartContext } from "../../context/CartC";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Checkout = () => {
+
+  const navigate = useNavigate();
+
+useEffect(() => {
+  const user = localStorage.getItem("email");
+  if (!user) {
+    navigate("/login");
+  }
+},[navigate]);
+
   const { cartItems, getCartTotal } = useContext(CartContext);
 
   return (

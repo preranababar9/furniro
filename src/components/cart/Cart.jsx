@@ -1,13 +1,13 @@
-import React from "react";
-import set4 from "/images/set4.svg";
+
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CartContext } from "../../context/CartC";
 import { IoAddOutline } from "react-icons/io5";
 import { LuMinus } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
+
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } =
     useContext(CartContext);
 

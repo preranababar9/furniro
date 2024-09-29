@@ -31,7 +31,7 @@ const Signup = () => {
       );
       console.log(isAuthenticated);
       const response = await AddUser(user);
-
+      localStorage.setItem('email', user.email); 
       toast.success(" Account Created Successfully! ", {
         position: "top-center",
       });
