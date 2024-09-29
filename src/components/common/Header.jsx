@@ -14,6 +14,7 @@ const Header = () => {
   const [menu, setMenu] = useState(false);
   const [toggle, setToggle] = useState(false);
 
+
   const { cartItems,   addMultiple } = useContext(CartContext);
 
   useEffect(() => {
@@ -44,6 +45,7 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
+       
 
         <div className="flex z-30 gap-5">
           {/* <button>
