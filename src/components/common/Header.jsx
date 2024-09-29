@@ -28,7 +28,7 @@ const Header = () => {
     <div>
       <div className="flex justify-between   max-width  py-4 items-center ">
         <Link to="/">
-        <img src={navlogo} alt="" className="max-md:h-10 z-30 max-md:w-1/2" /></Link>
+        <img src={navlogo} alt="" className="max-md:h-20 z-30 max-md:w-1/2" /></Link>
 
         <ul className="flex gap-14 max-md:gap-2 font-black font-normal text-xl max-md:hidden ">
           <li className="hover:underline hover:underline-offset-4 hover:scale-105">

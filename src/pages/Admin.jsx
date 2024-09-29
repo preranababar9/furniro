@@ -1,11 +1,21 @@
-import React from "react";
+
 import navlogo from "/logo/navlogo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { TbCategory } from "react-icons/tb";
 import { GoProjectSymlink } from "react-icons/go";
 import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
 
 const Admin = () => {
+const router = useNavigate();
+
+useEffect(() =>{
+  const admin = localStorage.getItem("email");
+if (admin == "myadmin@gmail.com") {
+router("/admin")
+}
+}, [])
+
   return (
     <section className="">
       <div className="flex  ">
@@ -31,6 +41,7 @@ const Admin = () => {
             </div>
           </ul>
         </div>
+
 
         <Outlet />
       </div>
