@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import login from "/images/login.png";
 import { PiHandWavingDuotone } from "react-icons/pi";
-import { AddUser, signInWithFirebase } from "../../../services/users";
+import { signInWithFirebase } from "../../../services/users";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { auth } from "../../../config/firebase";
+
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const router = useNavigate();
@@ -87,6 +88,17 @@ const Login = () => {
               >
                 Login
               </button>
+
+
+              <p className="text-md text-center">
+                Dont have a account?{" "}
+                <Link
+                  to="/register"
+                  className="font-bold underline underline-offset-4"
+                >
+                  Signup here
+                </Link>
+              </p>
             </div>
           </div>
         </form>

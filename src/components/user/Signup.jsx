@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import signup from "/images/signup.svg";
 import { Link } from "react-router-dom";
-import { AddProduct } from "../../../services/products";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AddUser, signUpWithFirebase } from "../../../services/users";
-import { auth } from "../../../config/firebase";
 
 const Signup = () => {
   const router = useNavigate();
