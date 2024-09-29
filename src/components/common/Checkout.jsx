@@ -11,6 +11,7 @@ useEffect(() => {
   const user = localStorage.getItem("email");
   if (!user) {
     navigate("/login");
+    window.scrollTo(0, 0);
   }
 },[navigate]);
 

@@ -11,8 +11,9 @@ const router = useNavigate();
 
 useEffect(() =>{
   const admin = localStorage.getItem("email");
-if (admin == "myadmin@gmail.com") {
-router("/admin")
+if (admin !== "myadmin@gmail.com") {
+router("/")
+window.scrollTo(0, 0);
 }
 }, [])
 

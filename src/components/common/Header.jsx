@@ -124,6 +124,7 @@ const Header = () => {
             ) : (
               <button className="bg-black text-white font-semibold py-3 px-4 mt-4 rounded-lg">
               <Link to="/register">SignUp / Login</Link>
+            
             </button>
             )}
           </div>
@@ -142,8 +143,10 @@ const Header = () => {
             </div>
           ): (
              <Link to="/register">
+          
             <MdOutlineAccountCircle size={28} />
           </Link>
+          
           )}
           {/* <Link to="/register">
             <MdOutlineAccountCircle size={28} />
