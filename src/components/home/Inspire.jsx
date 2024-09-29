@@ -1,6 +1,6 @@
-import React from "react";
+
 import slide1 from "/images/slide1.svg";
-import slide2 from "/images/slide2.svg";
+
 import set1 from "/images/set1.jpg";
 import slide4 from "/images/slide4.svg";
 import slide5 from "/images/slide5.svg";
