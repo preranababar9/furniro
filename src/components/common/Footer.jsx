@@ -71,9 +71,11 @@ const Footer = () => {
 
         <hr></hr>
 
-        <p className="py-10 font-semibold text-center text-lg">
-          2024 furniro. All rights reverved
+        <p className="py-8 font-semibold text-center text-lg">
+          2024 furniro. All rights reversed. <br></br>
+          Made by Prerana Babar.
         </p>
+      
       </div>
     </section>
   );
