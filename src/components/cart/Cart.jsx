@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext} from "react";
 import { CartContext } from "../../context/CartC";
 import { IoAddOutline } from "react-icons/io5";
 import { LuMinus } from "react-icons/lu";
