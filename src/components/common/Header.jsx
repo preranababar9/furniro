@@ -38,7 +38,7 @@ const Header = () => {
         <Link to="/" className="z-30">
         <img src={navlogo} alt="" className="max-md:h-10  max-md:w-3/4" /></Link>
 
-        <ul className="flex gap-14 max-md:gap-2 font-black font-normal text-xl max-md:hidden ">
+        <ul className="flex gap-14 max-md:gap-10 font-black font-normal text-xl max-md:hidden ">
           <li className="hover:underline hover:underline-offset-4 hover:scale-105">
             <Link to="/home">Home</Link>
           </li>
@@ -130,7 +130,7 @@ const Header = () => {
           </div>
         )}
 
-        <div className="flex lg:gap-10 max-md:gap-4 max-md:hidden items-center">
+        <div className="flex max-lg:gap-5 gap-10 max-md:hidden items-center">
           
         {user ? (
             <div
