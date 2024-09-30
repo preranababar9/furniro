@@ -9,7 +9,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './pages/Home.jsx';
+
 import Shop from './pages/Shop.jsx';
 import Contactpage from './pages/Contactpage.jsx';
 import Cartpage from './pages/Cartpage.jsx';
@@ -28,10 +28,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
-  },
-  {
-    path: "home",
-    element: <Home/>,
   },
   {
     path: "shop",

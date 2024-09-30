@@ -17,7 +17,7 @@ const Header = () => {
 
   const router = useNavigate();
 
-  const { cartItems,   addMultiple } = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
 
   useEffect(() => {
     if (toggle) {
@@ -40,7 +40,7 @@ const Header = () => {
 
         <ul className="flex gap-14 max-md:gap-10 font-black font-normal text-xl max-md:hidden ">
           <li className="hover:underline hover:underline-offset-4 hover:scale-105">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="hover:underline hover:underline-offset-4 hover:scale-105">
             <Link to="/shop">Shop</Link>
@@ -88,7 +88,7 @@ const Header = () => {
             <div>
               <ul className="flex flex-col gap-5 font-black font-normal text-2xl justify-start ">
                 <li className="hover:underline hover:underline-offset-4 hover:scale-105">
-                  <Link to="/home">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="hover:underline hover:underline-offset-4 hover:scale-105">
                   <Link to="/shop">Shop</Link>
