@@ -34,7 +34,7 @@ const Range = () => {
         </div>
 
         <div className="flex  justify-around gap-y-10 flex-wrap">
-          {rangeData.length > 0 ? (
+          {rangeData.length > 0 ? ( // conditional rendering
             rangeData.map((item, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img src={item.imageUrl} alt="" className="object-cover" />
@@ -44,7 +44,7 @@ const Range = () => {
               </div>
             ))
           ) : (
-            <p>not found</p>
+            <p className="text-center">Error fetching the data from firebase. We will get back to you soon.</p>
           )}
         </div>
       </div>

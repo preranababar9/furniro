@@ -1,4 +1,4 @@
-import { Firestore, collection } from "firebase/firestore";
+
 import { db } from "../config/firebase";
 
 export const AddProduct = async (data) => {
@@ -15,7 +15,7 @@ export const AddProduct = async (data) => {
 
 export const getAllProducts = async () => {
   try {
-    const response = await db.collection("products").get(); //
+    const response = await db.collection("products").get(); //to get all documents or data from db
     const data = response.docs.map((doc) => doc.data());
     return data;
   } catch (error) {

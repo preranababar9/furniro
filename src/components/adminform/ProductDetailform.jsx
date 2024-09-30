@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { v4 } from "uuid";
 import { toast } from "react-toastify";
 import { AddProduct } from "../../../services/products";
@@ -46,12 +46,12 @@ const ProductDetailform = () => {
       <div className="">
         <div className="">
           <form  onSubmit={setData} className="flex items-center flex-wrap gap-5">
-            <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
-              <label class="block text-gray-700 text-sm font-bold mb-2">
+            <div className="w-full max-w-xs p-5 bg-white rounded-lg ">
+              <label className="block text-gray-700 text-sm font-bold mb-2">
                 Product Title
               </label>
               <input
-                class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                className="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
                 placeholder=" Enter Product Title"
                 type="text"
                 value={product.title}
@@ -61,12 +61,12 @@ const ProductDetailform = () => {
               />
             </div>
 
-            <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
-              <label class="block text-gray-700 text-sm font-bold mb-2">
+            <div className="w-full max-w-xs p-5 bg-white rounded-lg ">
+              <label className="block text-gray-700 text-sm font-bold mb-2">
                 Short Product Description
               </label>
               <input
-                class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                className="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
                 placeholder=" Enter Short Product Description "
                 type="text"
                 value={product.shortdesc}
@@ -76,12 +76,12 @@ const ProductDetailform = () => {
               />
             </div>
 
-            <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
-              <label class="block text-gray-700 text-sm font-bold mb-2">
+            <div className="w-full max-w-xs p-5 bg-white rounded-lg ">
+              <label className="block text-gray-700 text-sm font-bold mb-2">
                 Product Description
               </label>
               <input
-                class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                className="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
                 placeholder="Enter Product Description"
                 type="text"
                 value={product.des}
@@ -91,12 +91,12 @@ const ProductDetailform = () => {
               />
             </div>
 
-            <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
-              <label class="block text-gray-700 text-sm font-bold mb-2">
+            <div className="w-full max-w-xs p-5 bg-white rounded-lg ">
+              <label className="block text-gray-700 text-sm font-bold mb-2">
                 Product Price
               </label>
               <input
-                class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                className="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
                 placeholder=" Enter Product Price"
                 type="text"
                 value={product.price}
@@ -106,12 +106,12 @@ const ProductDetailform = () => {
               />
             </div>
 
-            <div class="w-full max-w-xs p-5 bg-white rounded-lg ">
-              <label class="block text-gray-700 text-sm font-bold mb-2">
+            <div className="w-full max-w-xs p-5 bg-white rounded-lg ">
+              <label className="block text-gray-700 text-sm font-bold mb-2">
                 Product Image
               </label>
               <input
-                class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                className="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
                 placeholder=" Enter Product Price"
                 type="file"
               

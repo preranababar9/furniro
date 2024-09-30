@@ -6,7 +6,6 @@ import {
 import { db } from "../config/firebase";
 import { auth } from "../config/firebase";
 
-
 // Function to sign up a new user using Firebase Authentication
 export const signUpWithFirebase = async (email, password) => {
   try {
@@ -17,9 +16,6 @@ export const signUpWithFirebase = async (email, password) => {
     return error;
   }
 };
-
-
-
 
 // Function to sign in an existing user using Firebase Authentication
 export const signInWithFirebase = async (email, password) => {
@@ -32,13 +28,11 @@ export const signInWithFirebase = async (email, password) => {
   }
 };
 
-
-
 // Function to add user data to the Firestore database
 export const AddUser = async (data) => {
   try {
-    const response = await db.collection("users").doc(data.id).set(data);//users collection and document (doc) in that using the unique id from the data object and set saves the data in db 
-    
+    const response = await db.collection("users").doc(data.id).set(data); //users collection and document (doc) in that using the unique id from the data object and set saves the data in db
+
     return response;
   } catch (error) {
     console.log(error);

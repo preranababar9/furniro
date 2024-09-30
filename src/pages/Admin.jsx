@@ -15,7 +15,7 @@ if (admin !== "myadmin@gmail.com") {
 router("/")
 window.scrollTo(0, 0);
 }
-}, [])
+}, [router])
 
   return (
     <section className="">
@@ -23,11 +23,12 @@ window.scrollTo(0, 0);
         <div></div>
         <div className="px-12 bg-blue-200 h-[100vh] w-1/4">
           <div className=" pt-4 pb-12">
+            <Link to="/admin">
             <img
               src={navlogo}
               alt=""
-              className="max-md:h-10 z-30 w-4/5 max-md:w-1/2"
-            />
+              className="max-md:h-10 z-30 w-3/4 max-md:w-1/2"
+            /></Link>
           </div>
 
           <ul className="flex flex-col gap-12 text-2xl items-start font-semibold">
