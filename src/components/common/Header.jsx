@@ -36,7 +36,7 @@ const Header = () => {
     <div>
       <div className="flex justify-between   max-width  py-4 items-center ">
         <Link to="/" className="z-30">
-        <img src={navlogo} alt="" className="max-md:h-10  max-md:w-3/4" /></Link>
+        <img src={navlogo} alt="" className="max-md:h-10  max-md:w-[90%]" /></Link>
 
         <ul className="flex gap-14 max-md:gap-10 font-black font-normal text-xl max-md:hidden ">
           <li className="hover:underline hover:underline-offset-4 hover:scale-105">

@@ -26,7 +26,7 @@ const Login = () => {
         toast.success("Login successfull!", {
           position: "top-center",
         });
-        router("/home");
+        router("/");
       } else {
         toast.error("Incorrect Creds");
       }

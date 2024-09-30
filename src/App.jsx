@@ -10,12 +10,9 @@ function App() {
     <>
       <Header />
       <Hero />
-
       <Range />
-
       <Inspire />
       <Setup />
-
       <Footer />
     </>
   );

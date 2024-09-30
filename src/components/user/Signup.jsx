@@ -35,7 +35,7 @@ const Signup = () => {
       toast.success(" Account Created Successfully! ", {
         position: "top-center",
       });
-      router("/home");
+      router("/");
     } catch (error) {
       console.log(error);
       toast.error("Something went Wrong", {
