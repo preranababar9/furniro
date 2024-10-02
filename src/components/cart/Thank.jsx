@@ -14,7 +14,7 @@ const Thank = () => {
        
         <p className='lg:text-md uppercase  text-sm text-center font-semibold py-3'>Your Order is on it's way. We will deliver your order within 2 to 3 business days. </p>
         <p className='text-xl py-5 text-center font-medium '>Thank you for Shopping from Furniro!</p>
-        <Link to="/home" className='bg-brown text-white lg:py-4  py-3 px-8 rounded-lg  font-bold text-lg my-3'>Continue Shopping</Link>
+        <Link to="/" className='bg-brown text-white lg:py-4  py-3 px-8 rounded-lg  font-bold text-lg my-3'>Continue Shopping</Link>
 
 
        </div>
