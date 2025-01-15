@@ -1,4 +1,4 @@
-import React from "react";
+
 import hero from "/images/hero.webp";
 import { useNavigate } from "react-router-dom";
 
@@ -21,7 +21,8 @@ const Hero = () => {
           </h1>
           <p className="text-black pb-6">
             {" "}
-            Discover our new collection and elevate your style. Embrace the latest trends and timeless elegance.
+            Discover our new collection and elevate your style. Embrace the
+            latest trends and timeless elegance.
           </p>
 
           <button

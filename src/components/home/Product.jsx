@@ -1,16 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { getAllProducts } from "../../../services/products";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setData } from "../../redux/reducers/ProductSlice";
 
 const Product = () => {
-  const [data, setData] = useState([]);
+  const dispatch = useDispatch();
+  const productData = useSelector((state) => state.productData.data);
 
   const fetchProduct = async () => {
     try {
       const response = await getAllProducts();
      // Check if the response is an array before setting the state
      if (Array.isArray(response)) {
-      setData(response);
+      dispatch(setData(response));
     } else {
       console.error("Expected an array, but got:", response);
       setData([]); // Default to an empty array if the data format is unexpected
@@ -22,12 +25,8 @@ const Product = () => {
   };
 
   useEffect(() => {
-    console.log("product data fetched");
-
     fetchProduct();
-     // Scroll to top when component mounts
-     window.scrollTo(0, 0);
-  }, []);
+  }, [dispatch]);
 
   const router = useNavigate();
   const redirect = (id) => {
@@ -44,7 +43,7 @@ const Product = () => {
         </div>
 
         <div className="flex  flex-wrap justify-evenly  gap-y-4">
-          {data.map((item, index) => (
+          {productData.map((item, index) => (
             <div
             onClick={() =>redirect(item.id)}
               key={index}

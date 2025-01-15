@@ -1,4 +1,3 @@
-import React from "react";
 import contact1 from "/icons/contact1.svg";
 import contact2 from "/icons/contact2.svg";
 import contact3 from "/icons/contact3.svg";

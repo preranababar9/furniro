@@ -1,5 +1,5 @@
-
 import { db } from "../config/firebase";
+
 
 export const AddProduct = async (data) => {
   try {
@@ -11,8 +11,6 @@ export const AddProduct = async (data) => {
   }
 };
 
-
-
 export const getAllProducts = async () => {
   try {
     const response = await db.collection("products").get(); //to get all documents or data from db
@@ -23,13 +21,12 @@ export const getAllProducts = async () => {
   }
 };
 
-
-
-export const getProductsById = async (id) => { // Fetching a specific product by its ID.
+export const getProductsById = async (id) => {
+  // Fetching a specific product by its ID.
   try {
-    const response = await db.collection("products").doc(id).get(); //for fetching product by id for product detail page 
-    
-    const data =  response.data(); //data() method returns the document's contents in the form of a JavaScript object.
+    const response = await db.collection("products").doc(id).get(); //for fetching product by id for product detail page
+
+    const data = response.data(); //data() method returns the document's contents in the form of a JavaScript object.
     return data;
   } catch (error) {
     return error;
